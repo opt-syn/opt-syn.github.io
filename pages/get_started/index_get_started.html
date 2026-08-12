@@ -490,18 +490,19 @@
 </section>
 <section id="optimization-example-setup">
 <span id="id1"></span><h2>Optimization  Example Setup<a class="headerlink" href="#optimization-example-setup" title="Link to this heading">#</a></h2>
-<p>A constrained optimization problem of minimizing a function <span class="math notranslate nohighlight">\(f\)</span> subject to a sparse <span class="math notranslate nohighlight">\(L_1\)</span> norm constraint is</p>
+<p>A constrained optimization problem minimizing a function <span class="math notranslate nohighlight">\(f\)</span> subject to a <span class="math notranslate nohighlight">\(L_1\)</span> norm constraint is</p>
 <div class="math notranslate nohighlight">
-\[\begin{align}
-\beta^* \in \text{argmin}_{\norm{\beta}_1 \leq 50} f(\beta).\]</div>
+\[\begin{align*}
+\beta^* \in \text{argmin}_{\norm{\beta}_1 \leq 50} f(\beta).
+\end{align*}\]</div>
 <p>The function <span class="math notranslate nohighlight">\(f\)</span> is known to be real-valued, <span class="math notranslate nohighlight">\(m\)</span>-strongly convex, and <span class="math notranslate nohighlight">\(L\)</span>-smooth.</p>
 </section>
 <section id="analysis">
 <h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
 <p>The Projected Gradient Descent (PGD) algorithm with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> is the iterative procedure</p>
 <div class="math notranslate nohighlight">
-\[\beta_{k+1} = \text{proj}_{\mathcal{Z}}(\beta_k - \gamma \partial f_1(\beta_k)).\]</div>
-<p>PGD achieves linear convergence at rate <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span> if there exists a constant <span class="math notranslate nohighlight">\(C_0 &gt; 0\)</span> such that</p>
+\[\beta_{k+1} = \text{proj}_{\mathcal{Z}}(\beta_k - \gamma \partial f(\beta_k)).\]</div>
+<p>PGD achieves linear convergence at rate <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span> to the optimum <span class="math notranslate nohighlight">\(\beta^*\)</span> if there exists a constant <span class="math notranslate nohighlight">\(C_0 &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\norm{\beta_{k}-\beta^*}_2  \leq  C_0 \rho^{-k} \norm{\beta_0-\beta^*}, \ \forall x_0, k, f.\]</div>
 <p>The minimal worst-case convergence rate for PGD is <span class="math notranslate nohighlight">\(\frac{L-m}{L+m}\)</span> <a class="footnote-reference brackets" href="#footcite-taylor2018exact" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. This rate is achieved with stepsize parameter <span class="math notranslate nohighlight">\(\gamma = \frac{2}{L+m}\)</span>.</p>
