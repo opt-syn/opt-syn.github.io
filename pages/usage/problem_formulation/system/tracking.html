@@ -472,7 +472,7 @@
 <p>The linear system (signal generator) governing the path <span class="math notranslate nohighlight">\(\beta^*\)</span> is described by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
- \mat{c}{\eta_{k+1} \\ \beta^*_k} = \mat{c}{S_\beta \\ R_\beta} \eta_{k}
+ \mat{c}{\eta_{k+1} \\ \beta^*_k} = \mat{c}{S_\beta \\ R_\beta} \eta_{k}.
 \end{align}\end{split}\]</div>
 <p>Tracking of an the optimal solution is accomplished by setting the <code class="docutils literal notranslate"><span class="pre">tracking</span></code> field in <code class="docutils literal notranslate"><span class="pre">opt_system</span></code> to a struct with fields (<code class="docutils literal notranslate"><span class="pre">Sbeta</span></code>, <code class="docutils literal notranslate"><span class="pre">Rbeta</span></code>).</p>
 <p>Time-variation of <code class="docutils literal notranslate"><span class="pre">w^*</span></code> is not yet supported.</p>

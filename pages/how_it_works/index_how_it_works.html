@@ -456,8 +456,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization Algorithms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence Properties</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking Convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-stability">Robust Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvability-of-regulator-equations">Solvability of Regulator Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust Stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of Regulator Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
 </ul>
 </li>
@@ -477,34 +477,24 @@
   <section class="tex2jax_ignore mathjax_ignore" id="how-it-works">
 <h1>How it Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h1>
 <p><span style="color:#5D93BF">opt</span>-syn analyzes and synthesizes optimization algorithms using concepts from robust control. This page summarizes optimization/inclusion problems, convergence conditions, and the mathematical certificates provided by <span style="color:#5D93BF">opt</span>-syn.</p>
-<p>An optimization problem tries to find a point <span class="math notranslate nohighlight">\(\beta^*\)</span> satisfying</p>
+<p>A composite optimization problem tries to find a point <span class="math notranslate nohighlight">\(\beta^*\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
 \[\beta^*  \in \argmin_\beta \sum_{i=1}^s f_i(\beta).\]</div>
-<p>An inclusion problem is a more general concept than an optimization problem. Inclusion problems try to find a point <span class="math notranslate nohighlight">\(\beta^*\)</span> in the zero in the sum of operators.</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
- 0 \in \sum_{i=1}^s F_i(\beta^*).
-\end{align*}\]</div>
-<p>A solution (fixed-point) to a zero-inclusion problem is a pair <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with</p>
+<p>An inclusion problem is a more general concept than an optimization problem. Inclusion problems try to find a point <span class="math notranslate nohighlight">\(\beta^*\)</span> satisfying <span class="math notranslate nohighlight">\(0 \in \sum_{i=1}^s F_i(\beta^*)\)</span>. A solution (fixed-point) to this  zero-inclusion problem is a pair <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
  0 \in \sum_{i=1}^s w^{*,i}, \qquad w^{*,i} \in F_i(\beta^*).
 \end{align*}\]</div>
-<p>Zero-inclusion problems include solution concepts such as variational inequalities and constrained optimization problems. In particular, if each <span class="math notranslate nohighlight">\(F_i\)</span> is the subdifferential of a proper function <span class="math notranslate nohighlight">\(f_i\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
- \beta^* &amp; \in \argmin_\beta \sum_{i=1}^s f_i(\beta) &amp;  \text{implies} &amp; &amp; 0 &amp; \in \sum_{i=1}^s  F_i(\beta^*).
-\end{align*}\]</div>
-<p>The zero inclusion problem in <span class="math notranslate nohighlight">\(\partial f\)</span> is a necessary optimality principle for the optimization problem.</p>
+<p>Zero-inclusion problems include solution concepts such as variational inequalities and constrained optimization problems. As an example, the zero inclusion problem <span class="math notranslate nohighlight">\(0 \in \sum_{i=1}^s \partial f_i(\beta^*) \)</span> is a necessary optimality principle for the composite optimization problem.</p>
 <section id="optimization-algorithms">
 <h2>Optimization Algorithms<a class="headerlink" href="#optimization-algorithms" title="Link to this heading">#</a></h2>
 <p>An optimization algorithm is a procedure that generates a sequence of iterates <span class="math notranslate nohighlight">\((w_k, z_k)_{k \in \N}\)</span> satisfying <span class="math notranslate nohighlight">\(w^i_k \in F^i(z^i_k)\)</span>.</p>
-<p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
+<p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems <a class="footnote-reference brackets" href="#footcite-wang2011control" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
  \mat{c}{x_{k+1} \hl z_k} &amp;= \mat{c|cc}{I &amp; -\gamma \lambda I \hl I &amp; 0 }   \mat{c}{x_{k} \hl w_k^1 \\ w_k^2}, &amp; \mat{c}{w_k^1 \\ w_k^2} \in  \mat{c}{F_1(z_k^1)},
 \end{align*}\end{split}\]</div>
-<p>and the   Douglas-Rachford algorithm <a class="footnote-reference brackets" href="#footcite-douglas1956numerical" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>   with parameters <span class="math notranslate nohighlight">\(\gamma, \lambda \geq 0\)</span> may be represented by</p>
+<p>and the   Douglas-Rachford algorithm <a class="footnote-reference brackets" href="#footcite-douglas1956numerical" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>   with parameters <span class="math notranslate nohighlight">\(\gamma, \lambda \geq 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
  \mat{c}{x_{k+1} \hl z_k^1 \\ z_k^2} &amp;= \mat{c|cc}{I &amp; -\gamma \lambda I &amp; -\gamma \lambda I \hl I &amp;-\gamma I &amp; 0 \\
@@ -540,10 +530,10 @@
 </section>
 <section id="checking-convergence">
 <h2>Checking Convergence<a class="headerlink" href="#checking-convergence" title="Link to this heading">#</a></h2>
-<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: Robust Stability and the Solvability of Regulator Equations. This theory holds for on includion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span>.</p>
+<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: Robust Stability and the Solvability of Regulator Equations. This theory holds for includion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> <a class="footnote-reference brackets" href="#footcite-miller2026structure" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <p>Robust Stability ensures convergence to 0 if 0 is the solution to the inclusion problem (<span class="math notranslate nohighlight">\(0 \in F^i(0)\)</span> holds for all operators <span class="math notranslate nohighlight">\(F^i\)</span>). Solvability of the Regulator Equations ensures that a nonzero solution to the inclusion problem can be shifted into a zero solution of an zero-centered problem (error coordinates).</p>
-<section id="robust-stability">
-<h3>Robust Stability<a class="headerlink" href="#robust-stability" title="Link to this heading">#</a></h3>
+<section id="condition-1-robust-stability">
+<h3>Condition 1: Robust Stability<a class="headerlink" href="#condition-1-robust-stability" title="Link to this heading">#</a></h3>
 <p>Assume that the algorithm is well-posed, and the operator inclusion problem <span class="math notranslate nohighlight">\(0\in \sum_{i=1}^s F^i(\beta^*)\)</span> is uniquely solved by the pair <span class="math notranslate nohighlight">\((\beta^*, w^*) = (0, 0)\)</span>  Then for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>, the subsequent trajectories of</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
@@ -551,8 +541,8 @@
 \end{align}\]</div>
 <p>satisfy <span class="math notranslate nohighlight">\(\lim_{k \rightarrow \infty} \rho^{-k} x_k = 0\)</span>.</p>
 </section>
-<section id="solvability-of-regulator-equations">
-<h3>Solvability of Regulator Equations<a class="headerlink" href="#solvability-of-regulator-equations" title="Link to this heading">#</a></h3>
+<section id="condition-2-solvability-of-regulator-equations">
+<h3>Condition 2: Solvability of Regulator Equations<a class="headerlink" href="#condition-2-solvability-of-regulator-equations" title="Link to this heading">#</a></h3>
 <p>For any pair <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i} = 0\)</span>, there exists a state <span class="math notranslate nohighlight">\(x^*\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -562,9 +552,9 @@
 </section>
 <section id="implications">
 <h3>Implications<a class="headerlink" href="#implications" title="Link to this heading">#</a></h3>
-<p>The Robust Stability criterion is an intensive dynamical test, and will be verified using Integral Quadratic Constraints and Linear Matrix Inequality methods. In contrast, the  Regulator Equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> is provided by detectability of <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span>.</p>
+<p>The Robust Stability criterion is an intensive dynamical test, and will be verified using Integral Quadratic Constraints and Linear Matrix Inequality methods <a class="footnote-reference brackets" href="#footcite-megretski2002system" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. In contrast, the  Regulator Equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> is provided by detectability of <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span>.</p>
 <p>The Regulator Equation requirement is independent of the specific operators in <span class="math notranslate nohighlight">\(F\)</span>. Robust Stability is verified for classes of operators (e.g. <span class="math notranslate nohighlight">\(F_2\)</span> is maximal monotone).</p>
-<p>Fullfillment of the Regulator Equation and the <span style="color:#5D93BF">opt</span>-syn-verified Robust Stability requrirements imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
+<p>Fullfillment of the Regulator Equation and the <span style="color:#5D93BF">opt</span>-syn-verified Robust Stability requrirements imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
 </section>
 </section>
 <section id="networked-setting">
@@ -595,9 +585,9 @@
     \mat{c}{x_k^N \\ x^c_k \hl  y_k \\u_k} &amp; = \mat{c}{\Pi \\ \Theta \hl \Phi \\ \Gamma} \mat{c}{-\beta^* \\{w}^{*,1} \\ w^{*,2} \\ \vdots \\ w^{*, s-1}}, &amp;   \lim_{k \rightarrow \infty}
     z_k &amp; =  z^* = \mat{c}{\1 \otimes \beta^*}.     
 \end{align}\end{split}\]</div>
-<p>Controllers are formed by the interconnection of an internal model <a class="footnote-reference brackets" href="#footcite-francis1976internal" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and a designed subcontroller. The internal model is based on the solutions <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> of the regulator equations, and ensures that the Regulator Equation requirement is satisfied for <em>any</em> subcontroller.</p>
-<p>The subcontroller must then ensure that the overall procedure is well-posed and  obeys  Robust Stability condition. Solving for the subcontroller can be accomplished through  IQC synthesis methods <a class="footnote-reference brackets" href="#footcite-veenman2011iqc" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.
-Synthesis may also involve selecting a solution <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> to the regulator equations <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
+<p>Controllers are formed by the interconnection of an internal model <a class="footnote-reference brackets" href="#footcite-francis1976internal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and a designed subcontroller. The internal model is based on the solutions <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> of the regulator equations, and ensures that the Regulator Equation requirement is satisfied for <em>any</em> subcontroller.</p>
+<p>The subcontroller must then ensure that the overall procedure is well-posed and  obeys  Robust Stability condition. Solving for the subcontroller can be accomplished through  IQC synthesis methods <a class="footnote-reference brackets" href="#footcite-veenman2011iqc" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.
+Synthesis may also involve selecting a solution <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> to the regulator equations <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="extensions">
 <h2>Extensions<a class="headerlink" href="#extensions" title="Link to this heading">#</a></h2>
@@ -612,24 +602,41 @@ Synthesis may also involve selecting a solution <span class="math notranslate no
 </section>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="footcite-douglas1956numerical" role="doc-footnote">
+<aside class="footnote brackets" id="footcite-wang2011control" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Jing Wang and Nicola Elia. A Control Perspective for Centralized and Distributed Convex Optimization. In <em>2011 50th IEEE conference on decision and control and European control conference</em>, 3800–3805. IEEE, 2011.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-douglas1956numerical" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>Jim Douglas and Henry H Rachford. On the Numerical Solution of Heat Conduction Problems in Two and Three Space Variables. <em>Transactions of the American mathematical Society</em>, 82(2):421–439, 1956.</p>
 </aside>
+<aside class="footnote brackets" id="footcite-miller2026structure" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Jared Miller, Carsten Scherer, Fabian Jakob, and Andrea Iannelli. Structure, Analysis, and Synthesis of First-Order Algorithms. 2026. URL: <a class="reference external" href="https://arxiv.org/abs/2603.24795">https://arxiv.org/abs/2603.24795</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-megretski2002system" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Alexandre Megretski and Anders Rantzer. System analysis via integral quadratic constraints. <em>IEEE Transactions on Automatic Control</em>, 42(6):819–830, 1997.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-stoorvogel2000performance" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<p>Anton A Stoorvogel, Ali Saberi, and Peddapullaiah Sannuti. Performance with regulation constraints. <em>Automatica</em>, 36(10):1443–1456, 2000.</p>
+</aside>
 <aside class="footnote brackets" id="footcite-ryu2020uniqueness" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
 <p>Ernest K Ryu. Uniqueness of DRS as the 2 operator resolvent-splitting and impossibility of 3 operator resolvent-splitting. <em>Mathematical Programming</em>, 182(1):233–273, 2020.</p>
 </aside>
 <aside class="footnote brackets" id="footcite-francis1976internal" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
 <p>Bruce A Francis and Walter Murray Wonham. The internal model principle of control theory. <em>Automatica</em>, 12(5):457–465, 1976.</p>
 </aside>
 <aside class="footnote brackets" id="footcite-veenman2011iqc" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">8</a><span class="fn-bracket">]</span></span>
 <p>Joost Veenman and Carsten W Scherer. IQC-synthesis with general dynamic multipliers. <em>IFAC Proceedings Volumes</em>, 44(1):4600–4605, 2011.</p>
 </aside>
 <aside class="footnote brackets" id="footcite-scherer1997multiobjective" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">9</a><span class="fn-bracket">]</span></span>
 <p>C. Scherer, P. Gahinet, and M. Chilali. Multiobjective Output-Feedback Control via LMI Optimization . <em>IEEE Transactions on Automatic Control</em>, 42(7):896–911, 1997. <a class="reference external" href="https://doi.org/10.1109/9.599969">doi:10.1109/9.599969</a>.</p>
 </aside>
 </aside>
@@ -684,8 +691,8 @@ Synthesis may also involve selecting a solution <span class="math notranslate no
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization Algorithms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence Properties</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking Convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-stability">Robust Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solvability-of-regulator-equations">Solvability of Regulator Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust Stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of Regulator Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
 </ul>
 </li>
