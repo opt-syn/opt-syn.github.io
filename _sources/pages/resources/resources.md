@@ -8,7 +8,7 @@ tocdepth: 1
 
  ## Slides
 
-| [Structures of Optimization Algorithms ](_static/presentation_wuds_structure.pdf)|
+[Structures of Optimization Algorithms ](_static/presentation_wuds_structure.pdf)
 
 <!-- ## Publications with {{osyn}}
 
