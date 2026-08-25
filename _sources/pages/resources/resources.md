@@ -8,10 +8,7 @@ tocdepth: 1
 
  ## Slides
 
- Description | 
- --- |
-| [Structures of Optimization Algorithms (short)](_static/optimization_short.pdf)|  |
-| [Structures of Optimization Algorithms (long)](_static/optimization_long.pdf) ||
+| [Structures of Optimization Algorithms ](_static/presentation_wuds_structure.pdf)|
 
 <!-- ## Publications with {{osyn}}
 
@@ -32,8 +29,8 @@ miller2026structure
 {{osyn}} is part of a family of computational tools for the analysis and synthesis of optimization algorithms. Other software to perform algorithm analysis and/or synthesis includes
 | Name | Description |
 | --- | --- |
-| [PEPit](https://pepit.readthedocs.io)| Finite-horizon analysis of first-order methods. |
-| [AutoLyap](https://autolyap.github.io/) | Infinite-horizon Lyapunov analysis of first-order methods. |
+| [PEPit](https://pepit.readthedocs.io)| Finite-horizon analysis and synthesis of first-order methods. |
+| [AutoLyap](https://autolyap.github.io/) | Finite and infinite-horizon Lyapunov analysis of first-order methods. |
 | [decent-bench](https://github.com/team-decent/decent-bench) | Benchmarking of decentralized/distributed/federated optimization  algorithms. |
 | [AlgoSynthesis](https://github.com/CarstenScherer/Algorithm-Synthesis) | Jointly convex IQC-based synthesis of $s=1$ gradient-descent algorithms |
 

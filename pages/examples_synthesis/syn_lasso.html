@@ -469,8 +469,8 @@
   <section class="tex2jax_ignore mathjax_ignore" id="lasso">
 <h1>LASSO<a class="headerlink" href="#lasso" title="Link to this heading">#</a></h1>
 <p>This demonstration applies Synthesis towards LASSO <a class="footnote-reference brackets" href="#footcite-tibshirani1996regression" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> solvers. The hard LASSO problem is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c184836-a04a-41fe-b536-3855bd93812b">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3c184836-a04a-41fe-b536-3855bd93812b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a2f73e2-a9a7-4fda-a1fc-a203ee0caff1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2a2f73e2-a9a7-4fda-a1fc-a203ee0caff1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \beta^* \in \argmin_{\norm{\beta}_1 \leq \tau} \frac{1}{2}\norm{E\beta - b}_2^2.
 \end{align}\]</div>
 <p>The LASSO problem with <span class="math notranslate nohighlight">\(E \in \R^{m \times n}\)</span> is overparameterized if <span class="math notranslate nohighlight">\(n &gt; m\)</span>, and is  underparameterized if <span class="math notranslate nohighlight">\(n &lt; m\)</span>. It is assumed that <span class="math notranslate nohighlight">\(E\)</span> has full row rank.</p>
@@ -498,7 +498,7 @@ In the underparameterized regime, the strongly convex <span class="math notransl
 
 <span class="c">%% describe the operators</span>
 <span class="c">%define the data matrix</span>
-<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;twister&#39;</span><span class="p">);</span>
+<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">'twister'</span><span class="p">);</span>
 <span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
 <span class="n">A_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="nb">randn</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 <span class="n">b_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="nb">randn</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="nb">rand</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
@@ -550,7 +550,7 @@ In the underparameterized regime, the strongly convex <span class="math notransl
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">Code for Explicit Overparameterized LASSO</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% describe the operators</span>
-<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;twister&#39;</span><span class="p">);</span>
+<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">'twister'</span><span class="p">);</span>
 
 <span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="n">A_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">randn</span><span class="p">(</span><span class="mf">1.3</span><span class="o">*</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
