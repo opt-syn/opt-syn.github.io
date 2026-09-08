@@ -240,7 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples_synthesis/index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_lasso.html">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_server.html">Remote Quadratic Programming</a></li>
@@ -457,9 +456,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic Performance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-stability-iss"><span class="math notranslate nohighlight">\(\ell_2\)</span> Stability (ISS)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-gain"><span class="math notranslate nohighlight">\(\ell_2\)</span> Gain</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-to-peak">Peak-to-Peak</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#passivity">Passivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ergodic-convergence">Ergodic Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
 </ul>
             </nav>
         </div>
@@ -855,150 +853,12 @@ objective contribution.</p>
 </div>
 </dd></dl>
 
-</section>
-<section id="peak-to-peak">
-<h2>Peak-to-Peak<a class="headerlink" href="#peak-to-peak" title="Link to this heading">#</a></h2>
-<dl class="mat class">
-<dt class="sig sig-object mat" id="spec.spec_p2p">
-<span class="property"><span class="pre">class</span> </span><span class="sig-prename descclassname"><span class="pre">spec.</span></span><span class="sig-name descname"><span class="pre">spec_p2p</span></span><a class="headerlink" href="#spec.spec_p2p" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref mat mat-class docutils literal notranslate"><span class="pre">spec.spec_interface</span></code></p>
-<p>SPEC_P2P Peak-to-peak gain specification.</p>
-<p>Bounds the induced peak-to-peak norm (the <span class="math notranslate nohighlight">\(*\)</span>-norm of a linear
-system) from the performance input to the performance output: the peak
-(over time) of the output is bounded by <span class="math notranslate nohighlight">\(\gamma\)</span> times the peak
-of the input,</p>
-<p><span class="math notranslate nohighlight">\(\sup_{k \geq 0} \norm{z_{p,k}}_2 \; \leq \; \gamma \, \sup_{k \geq 0} \norm{w_{p,k}}_2.\)</span></p>
-<div class="members docutils container">
-<dl>
-<dt>Constructor Summary</dt><dd><dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_p2p.spec_p2p">
-<span class="sig-name descname"><span class="pre">spec_p2p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">GAIN</span></em>, <em class="sig-param"><span class="pre">iwp</span></em>, <em class="sig-param"><span class="pre">izp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_p2p.spec_p2p" title="Link to this definition">#</a></dt>
-<dd><p>SPEC_P2P Construct a peak-to-peak gain specification.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>GAIN</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span></code></span>) – Peak-to-peak gain bound <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
-<li><p><strong>iwp</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(vector)</span></code></span>) – Performance-input indices in the network.</p></li>
-<li><p><strong>izp</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(vector)</span></code></span>) – Performance-output indices in the network.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A new peak-to-peak specification.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>spec_p2p</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>if nargin &lt; 4</dt><dd><p>rho = 1;</p>
-</dd>
-</dl>
-<p>end</p>
-</dd></dl>
+<!-- ## Peak-to-Peak
 
-</dd>
-<dt>Property Summary</dt><dd><dl class="mat attribute">
-<dt class="sig sig-object mat" id="spec.spec_p2p.gain">
-<span class="sig-name descname"><span class="pre">gain</span></span><a class="headerlink" href="#spec.spec_p2p.gain" title="Link to this definition">#</a></dt>
-<dd><p>Peak-to-peak gain <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
-</dd></dl>
-
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="spec.spec_p2p.weight">
-<span class="sig-name descname"><span class="pre">weight</span></span><a class="headerlink" href="#spec.spec_p2p.weight" title="Link to this definition">#</a></dt>
-<dd><p>Weighting between the peak and gain terms.</p>
-</dd></dl>
-
-</dd>
-<dt>Method Summary</dt><dd><dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_p2p.create_vars">
-<span class="sig-name descname"><span class="pre">create_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cons</span></em>, <em class="sig-param"><span class="pre">name</span></em>, <em class="sig-param"><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_p2p.create_vars" title="Link to this definition">#</a></dt>
-<dd><p>CREATE_VARS Create the peak-to-peak variables and constraints.</p>
-<p>Introduces <code class="docutils literal notranslate"><span class="pre">mu_p2p</span></code> and (when targeted) <code class="docutils literal notranslate"><span class="pre">gam_p2p</span></code>, with the
-ordering and non-negativity constraints of the peak-to-peak
-certificate.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>cons</strong> – Accumulated LMI constraints.</p></li>
-<li><p><strong>name</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">char</span></code></span>) – Name suffix for the created variables.</p></li>
-<li><p><strong>config</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">opt_config</span></code></span>) – Configuration options.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[vars,</span> <span class="pre">cons]</span></code> — struct with fields <code class="docutils literal notranslate"><span class="pre">mu_p2p</span></code>,
-<code class="docutils literal notranslate"><span class="pre">gam_p2p</span></code> and the updated constraint set.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>struct, cell</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_p2p.quad_terminal">
-<span class="sig-name descname"><span class="pre">quad_terminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_p2p.quad_terminal" title="Link to this definition">#</a></dt>
-<dd><p>QUAD_TERMINAL tbd</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables
-(expects <code class="docutils literal notranslate"><span class="pre">mu_p2p</span></code>, <code class="docutils literal notranslate"><span class="pre">gam_p2p</span></code>).</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Decomposed terminal quadratic.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>quad_param</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_p2p.supply">
-<span class="sig-name descname"><span class="pre">supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_p2p.supply" title="Link to this definition">#</a></dt>
-<dd><p>SUPPLY Quadratic supply-rate matrix of the specification.</p>
-<p>Returns <span class="math notranslate nohighlight">\(-\texttt{gain} \cdot I\)</span> on the performance input
-channel.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Quadratic running-cost matrix <span class="math notranslate nohighlight">\(M\)</span>.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>double</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_p2p.supply_quad">
-<span class="sig-name descname"><span class="pre">supply_quad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_p2p.supply_quad" title="Link to this definition">#</a></dt>
-<dd><p>SUPPLY_QUAD Decomposed quadratic supply rate.</p>
-<p>Builds the running quadratic on the performance input channel.
-When this specification is the optimization target, the peak
-gain <code class="docutils literal notranslate"><span class="pre">gam_p2p</span></code> is minimized.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables
-(expects <code class="docutils literal notranslate"><span class="pre">mu_p2p</span></code>, <code class="docutils literal notranslate"><span class="pre">gam_p2p</span></code>).</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[quad,</span> <span class="pre">objective]</span></code> — the decomposed quadratic and the
-objective contribution.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>quad_param, double</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd>
-</dl>
-</div>
-</dd></dl>
-
+```{eval-rst}
+.. mat:autoclass:: spec.spec_p2p
+    :members:
+``` -->
 </section>
 <section id="passivity">
 <h2>Passivity<a class="headerlink" href="#passivity" title="Link to this heading">#</a></h2>
@@ -1140,72 +1000,72 @@ objective contribution.</p>
 </dd></dl>
 
 </section>
-<section id="ergodic-convergence">
-<h2>Ergodic Convergence<a class="headerlink" href="#ergodic-convergence" title="Link to this heading">#</a></h2>
+<section id="stochastic-sensitivity">
+<h2>Stochastic Sensitivity<a class="headerlink" href="#stochastic-sensitivity" title="Link to this heading">#</a></h2>
 <dl class="mat class">
-<dt class="sig sig-object mat" id="spec.spec_ergodic">
-<span class="property"><span class="pre">class</span> </span><span class="sig-prename descclassname"><span class="pre">spec.</span></span><span class="sig-name descname"><span class="pre">spec_ergodic</span></span><a class="headerlink" href="#spec.spec_ergodic" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object mat" id="spec.spec_h2">
+<span class="property"><span class="pre">class</span> </span><span class="sig-prename descclassname"><span class="pre">spec.</span></span><span class="sig-name descname"><span class="pre">spec_h2</span></span><a class="headerlink" href="#spec.spec_h2" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref mat mat-class docutils literal notranslate"><span class="pre">spec.spec_interface</span></code></p>
-<p>SPEC_ERGODIC Ergodic (sublinear-rate) convergence specification.</p>
-<p>Enforces asymptotic stability of the algorithmic interconnection in an
-ergodic (averaged) sense, appropriate for algorithms whose last iterate
-need not converge but whose running averages do. The specification is
-built on the consensus-weighted performance channel produced by
-<a class="reference internal" href="plants/doc_genplant.html#plant.genplant.genplant.perf_ergodic" title="plant.genplant.genplant.perf_ergodic"><code class="xref mat mat-meth docutils literal notranslate"><span class="pre">plant.genplant.genplant.perf_ergodic()</span></code></a>, using the weighted
-consensus matrix <span class="math notranslate nohighlight">\(N_w\)</span>.</p>
-<p>A strict-passivity margin <code class="docutils literal notranslate"><span class="pre">erg_pass</span></code> supplies an objective for the
-alternating methods used to certify ergodic convergence.</p>
+<p>SPEC_H2 Stochastic stability specification with input/output indices.</p>
+<p>The performance input $w_p$ is an i.d.d. zero-mean stochastic process
+with bounded covariance $mathbb{E}[||w_{p,k}||_2^2] leq sigma^2$
+Imposes a stochastic stability constraint</p>
+<div class="math notranslate nohighlight">
+\[\limsup_{T \rightarrow \infty} \frac{1}{T} \sum_{k=0}^{T}
+\mathbb{E}[|| z_{p,k}||^2_2] \leq \gamma^2 \sigma^2\]</div>
+<p>This is analogous to a primal H2 norm in the linear system setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Note<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The h2 implementation requires that the stochastic input and</p>
+</dd>
+</dl>
+<p>the oracle output are conditionally independent at each time k (zero
+feedthrough in $D_{z w_p}$).</p>
 <div class="members docutils container">
 <dl>
 <dt>Constructor Summary</dt><dd><dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.spec_ergodic">
-<span class="sig-name descname"><span class="pre">spec_ergodic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.spec_ergodic" title="Link to this definition">#</a></dt>
-<dd><p>SPEC_ERGODIC Construct an ergodic convergence specification.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.spec_h2">
+<span class="sig-name descname"><span class="pre">spec_h2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">gain</span></em>, <em class="sig-param"><span class="pre">cov</span></em>, <em class="sig-param"><span class="pre">iwp</span></em>, <em class="sig-param"><span class="pre">izp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.spec_h2" title="Link to this definition">#</a></dt>
+<dd><p>SPEC_PASSIVITY Construct a passivity specification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>GAIN</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span></code></span>) – Gain bound <span class="math notranslate nohighlight">\(\gamma\)</span>.</p></li>
+<li><p><strong>cov</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">or</span> <span class="pre">symmetric</span> <span class="pre">matrix</span> <span class="pre">of</span> <span class="pre">double</span></code></span>) – Covariance of noise process</p></li>
+<li><p><strong>iwp</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(vector)</span></code></span>) – Performance-input indices in the network.</p></li>
+<li><p><strong>izp</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span> <span class="pre">(vector)</span></code></span>) – Performance-output indices in the network.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new passivity specification.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>spec_passivity</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>Error if <code class="docutils literal notranslate"><span class="pre">iwp</span></code> and <code class="docutils literal notranslate"><span class="pre">izp</span></code> have different lengths.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd>
 <dt>Property Summary</dt><dd><dl class="mat attribute">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.Nw">
-<span class="sig-name descname"><span class="pre">Nw</span></span><a class="headerlink" href="#spec.spec_ergodic.Nw" title="Link to this definition">#</a></dt>
-<dd><p>Weighted consensus matrix <span class="math notranslate nohighlight">\(N_w\)</span>.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.cov">
+<span class="sig-name descname"><span class="pre">cov</span></span><a class="headerlink" href="#spec.spec_h2.cov" title="Link to this definition">#</a></dt>
+<dd><p>covariance bound (scalar or matrix)</p>
 </dd></dl>
 
 <dl class="mat attribute">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.erg_pass">
-<span class="sig-name descname"><span class="pre">erg_pass</span></span><a class="headerlink" href="#spec.spec_ergodic.erg_pass" title="Link to this definition">#</a></dt>
-<dd><p>Strict-passivity margin used as an objective.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.gain">
+<span class="sig-name descname"><span class="pre">gain</span></span><a class="headerlink" href="#spec.spec_h2.gain" title="Link to this definition">#</a></dt>
+<dd><p>stochastic gain</p>
 </dd></dl>
 
 </dd>
 <dt>Method Summary</dt><dd><dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.augment_ergodic">
-<span class="sig-name descname"><span class="pre">augment_ergodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sys</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.augment_ergodic" title="Link to this definition">#</a></dt>
-<dd><p>AUGMENT_ERGODIC add new input and output channels to the
-system to allow for ergodic performance specifications to be
-met (duality gap). Reads the consensus structure from the system, appends the</p>
-<blockquote>
-<div><p>ergodic performance channel to the plant via
-<a class="reference internal" href="plants/doc_genplant.html#plant.genplant.genplant.perf_ergodic" title="plant.genplant.genplant.perf_ergodic"><code class="xref mat mat-meth docutils literal notranslate"><span class="pre">plant.genplant.genplant.perf_ergodic()</span></code></a>, and returns
-both the specification and the augmented system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">param sys<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The optimization-algorithm system.</p>
-</dd>
-<dt class="field-even">returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[sys_erg]</span></code> — the ergodic specification and the
-system with the ergodic performance channel added.</p>
-</dd>
-<dt class="field-odd">rtype<span class="colon">:</span></dt>
-<dd class="field-odd"><p>spec_ergodic, (system)</p>
-</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-<dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.create_vars">
-<span class="sig-name descname"><span class="pre">create_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cons</span></em>, <em class="sig-param"><span class="pre">name</span></em>, <em class="sig-param"><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.create_vars" title="Link to this definition">#</a></dt>
-<dd><p>CREATE_VARS Create the strict-passivity margin variable.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.create_vars">
+<span class="sig-name descname"><span class="pre">create_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cons</span></em>, <em class="sig-param"><span class="pre">name</span></em>, <em class="sig-param"><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.create_vars" title="Link to this definition">#</a></dt>
+<dd><p>CREATE_VARS Create the passivity margin variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1215,8 +1075,8 @@ system with the ergodic performance channel added.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[vars,</span> <span class="pre">cons]</span></code> — struct with field <code class="docutils literal notranslate"><span class="pre">erg_pass</span></code> and the
-updated constraint set.</p>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[vars,</span> <span class="pre">cons]</span></code> — struct with field <code class="docutils literal notranslate"><span class="pre">ind_pass</span></code> and the
+(unchanged) constraint set.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>struct, cell</p>
@@ -1225,30 +1085,38 @@ updated constraint set.</p>
 </dd></dl>
 
 <dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.set_p">
-<span class="sig-name descname"><span class="pre">set_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.set_p" title="Link to this definition">#</a></dt>
-<dd><p>SET_P Set the bisection parameter (the strict-passivity margin).</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.get_cov">
+<span class="sig-name descname"><span class="pre">get_cov</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.get_cov" title="Link to this definition">#</a></dt>
+<dd><p>GET_COV get the covariance matrix</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="spec.spec_h2.get_objective">
+<span class="sig-name descname"><span class="pre">get_objective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.get_objective" title="Link to this definition">#</a></dt>
+<dd><p>get the objective in the h2 problem</p>
+</dd></dl>
+
+<dl class="mat method">
+<dt class="sig sig-object mat" id="spec.spec_h2.set_p">
+<span class="sig-name descname"><span class="pre">set_p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.set_p" title="Link to this definition">#</a></dt>
+<dd><p>SET_P Set the bisection parameter (the input passivity index).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>p</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span></code></span>) – New value of the margin, e.g. for a peak-to-peak
-certifier or an <span class="math notranslate nohighlight">\(\ell_2\)</span>-gain bound.</p>
+<dd class="field-odd"><p><strong>p</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">double</span></code></span>) – New value of the input passivity index <span class="math notranslate nohighlight">\(\nu_w\)</span>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The updated specification.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>spec_ergodic</p>
+<dd class="field-odd"><p>spec_passivity</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.supply">
-<span class="sig-name descname"><span class="pre">supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.supply" title="Link to this definition">#</a></dt>
-<dd><p>SUPPLY Ergodic supply rate (duality gap).</p>
-<p>Builds a passivity-type supply rate from the consensus matrix
-<span class="math notranslate nohighlight">\(N_w\)</span> and adds a strict-passivity penalty scaled by
-<code class="docutils literal notranslate"><span class="pre">erg_pass</span></code>. Returns empty if <span class="math notranslate nohighlight">\(N_w\)</span> is empty.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.supply">
+<span class="sig-name descname"><span class="pre">supply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.supply" title="Link to this definition">#</a></dt>
+<dd><p>SUPPLY Quadratic supply-rate matrix for the passivity indices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables.</p>
@@ -1263,16 +1131,12 @@ certifier or an <span class="math notranslate nohighlight">\(\ell_2\)</span>-gai
 </dd></dl>
 
 <dl class="mat method">
-<dt class="sig sig-object mat" id="spec.spec_ergodic.supply_quad">
-<span class="sig-name descname"><span class="pre">supply_quad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_ergodic.supply_quad" title="Link to this definition">#</a></dt>
-<dd><p>SUPPLY_QUAD Decomposed quadratic supply rate.</p>
-<p>Starts from the base-class decomposition and, when this
-specification is the optimization target, adds a strict
-passivity penalty <code class="docutils literal notranslate"><span class="pre">erg_pass</span></code> to the <span class="math notranslate nohighlight">\(Q\)</span> block and uses
-it as the objective.</p>
+<dt class="sig sig-object mat" id="spec.spec_h2.supply_quad">
+<span class="sig-name descname"><span class="pre">supply_quad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vars_spec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#spec.spec_h2.supply_quad" title="Link to this definition">#</a></dt>
+<dd><p>SUPPLY_QUAD Decomposed quadratic supply rate for h2 synthesis</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables (expects <code class="docutils literal notranslate"><span class="pre">erg_pass</span></code>).</p>
+<dd class="field-odd"><p><strong>vars_spec</strong> (<span><code class="xref mat mat-obj docutils literal notranslate"><span class="pre">struct</span></code></span>) – Specification variables (expects <code class="docutils literal notranslate"><span class="pre">ind_pass</span></code>).</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[quad,</span> <span class="pre">objective]</span></code> — the decomposed quadratic and the
@@ -1289,7 +1153,12 @@ objective contribution.</p>
 </div>
 </dd></dl>
 
-</section>
+<!-- ## Ergodic Convergence
+
+```{eval-rst}
+.. mat:autoclass:: spec.spec_ergodic
+    :members:
+``` --></section>
 </section>
 
 
@@ -1343,9 +1212,8 @@ objective contribution.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic Performance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-stability-iss"><span class="math notranslate nohighlight">\(\ell_2\)</span> Stability (ISS)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-gain"><span class="math notranslate nohighlight">\(\ell_2\)</span> Gain</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-to-peak">Peak-to-Peak</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#passivity">Passivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ergodic-convergence">Ergodic Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
 </ul>
   </nav></div>
 

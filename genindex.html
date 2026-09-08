@@ -233,7 +233,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="pages/examples_synthesis/index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="pages/examples_synthesis/syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pages/examples_synthesis/syn_lasso.html">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pages/examples_synthesis/syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pages/examples_synthesis/syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pages/examples_synthesis/syn_server.html">Remote Quadratic Programming</a></li>
@@ -487,8 +486,6 @@
       <li><a href="pages/documentation/doc_manager.html#manager.opt_synthesis.alternate">alternate() (manager.opt_synthesis method)</a>
 </li>
       <li><a href="pages/documentation/doc_config.html#config.opt_config.ana">ana (config.opt_config attribute)</a>
-</li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.augment_ergodic">augment_ergodic() (spec.spec_ergodic method)</a>
 </li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.lmi_synthesis_interface.augment_vars">augment_vars() (system.generic.lmi_synthesis_interface method)</a>
 
@@ -754,6 +751,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.cov">cov (spec.spec_h2 attribute)</a>
+</li>
       <li><a href="pages/documentation/operators/doc_sml.html#operator.op_sml_causal.create_iqc">create_iqc() (operator.op_sml_causal method)</a>
 
       <ul>
@@ -783,11 +782,9 @@
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.create_vars">(spec.spec_e2e method)</a>
 </li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.create_vars">(spec.spec_ergodic method)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.create_vars">(spec.spec_h2 method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.create_vars">(spec.spec_l2 method)</a>
-</li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.create_vars">(spec.spec_p2p method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_passivity.create_vars">(spec.spec_passivity method)</a>
 </li>
@@ -982,8 +979,6 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.erg_pass">erg_pass (spec.spec_ergodic attribute)</a>
-</li>
       <li><a href="pages/documentation/doc_iqc.html#iqc.iqc_data_container.ERGODIC">ERGODIC (iqc.iqc_data_container attribute)</a>
 
       <ul>
@@ -1111,9 +1106,9 @@
       <ul>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.gain">(spec.spec_e2e attribute)</a>
 </li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.gain">(spec.spec_l2 attribute)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.gain">(spec.spec_h2 attribute)</a>
 </li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.gain">(spec.spec_p2p attribute)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.gain">(spec.spec_l2 attribute)</a>
 </li>
       </ul></li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.reg_cl_out.Gam">Gam (system.generic.reg_cl_out attribute)</a>
@@ -1149,6 +1144,8 @@
 </li>
       </ul></li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.opt_system_interface.get_consensus_weighted">get_consensus_weighted() (system.generic.opt_system_interface method)</a>
+</li>
+      <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.get_cov">get_cov() (spec.spec_h2 method)</a>
 </li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.lmi_synthesis_interface.get_D_mask">get_D_mask() (system.generic.lmi_synthesis_interface method)</a>
 
@@ -1201,6 +1198,8 @@
       <li><a href="pages/documentation/operators/doc_set_valued.html#operator.op_gen.get_mu">get_mu() (operator.op_gen method)</a>
 </li>
       <li><a href="pages/documentation/doc_plotting.html#simulator.alg_plotter.get_name">get_name() (simulator.alg_plotter method)</a>
+</li>
+      <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.get_objective">get_objective() (spec.spec_h2 method)</a>
 </li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.opt_system_interface.get_op">get_op() (system.generic.opt_system_interface method)</a>
 </li>
@@ -1630,8 +1629,6 @@
 </li>
       <li><a href="pages/documentation/plants/doc_genplant.html#plant.genplant.genplant.nw">nw (plant.genplant.genplant attribute)</a>
 </li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.Nw">Nw (spec.spec_ergodic attribute)</a>
-</li>
       <li><a href="pages/documentation/doc_iqc.html#iqc.iqc_loop_factored.nw">nw() (iqc.iqc_loop_factored method)</a>
 
       <ul>
@@ -2040,8 +2037,6 @@
 </li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.lmi_analysis_interface.quad_performance_augment">quad_performance_augment() (system.generic.lmi_analysis_interface method)</a>
 </li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.quad_terminal">quad_terminal() (spec.spec_p2p method)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -2225,7 +2220,7 @@
       <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.set_p">set_p() (spec.spec_e2e method)</a>
 
       <ul>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.set_p">(spec.spec_ergodic method)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.set_p">(spec.spec_h2 method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.set_p">(spec.spec_l2 method)</a>
 </li>
@@ -2270,17 +2265,13 @@
 </li>
       <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.spec_e2e">spec_e2e() (spec.spec_e2e method)</a>
 </li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic">spec_ergodic (class in spec)</a>
+      <li><a href="pages/documentation/doc_specs.html#spec.spec_h2">spec_h2 (class in spec)</a>
 </li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.spec_ergodic">spec_ergodic() (spec.spec_ergodic method)</a>
+      <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.spec_h2">spec_h2() (spec.spec_h2 method)</a>
 </li>
       <li><a href="pages/documentation/doc_specs.html#spec.spec_l2">spec_l2 (class in spec)</a>
 </li>
       <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.spec_l2">spec_l2() (spec.spec_l2 method)</a>
-</li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p">spec_p2p (class in spec)</a>
-</li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.spec_p2p">spec_p2p() (spec.spec_p2p method)</a>
 </li>
       <li><a href="pages/documentation/doc_specs.html#spec.spec_passivity">spec_passivity (class in spec)</a>
 </li>
@@ -2343,11 +2334,9 @@
       <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.supply">supply() (spec.spec_e2e method)</a>
 
       <ul>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.supply">(spec.spec_ergodic method)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.supply">(spec.spec_h2 method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.supply">(spec.spec_l2 method)</a>
-</li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.supply">(spec.spec_p2p method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_passivity.supply">(spec.spec_passivity method)</a>
 </li>
@@ -2363,11 +2352,9 @@
       <li><a href="pages/documentation/doc_specs.html#spec.spec_e2e.supply_quad">supply_quad() (spec.spec_e2e method)</a>
 
       <ul>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_ergodic.supply_quad">(spec.spec_ergodic method)</a>
+        <li><a href="pages/documentation/doc_specs.html#spec.spec_h2.supply_quad">(spec.spec_h2 method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_l2.supply_quad">(spec.spec_l2 method)</a>
-</li>
-        <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.supply_quad">(spec.spec_p2p method)</a>
 </li>
         <li><a href="pages/documentation/doc_specs.html#spec.spec_passivity.supply_quad">(spec.spec_passivity method)</a>
 </li>
@@ -2476,12 +2463,10 @@
 </li>
       <li><a href="pages/documentation/system/doc_system.html#system.generic.reg_cl_out.W">W (system.generic.reg_cl_out attribute)</a>
 </li>
-      <li><a href="pages/documentation/doc_specs.html#spec.spec_p2p.weight">weight (spec.spec_p2p attribute)</a>
+      <li><a href="pages/documentation/doc_simulation.html#simulator.alg_sim_out.werr">werr (simulator.alg_sim_out attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pages/documentation/doc_simulation.html#simulator.alg_sim_out.werr">werr (simulator.alg_sim_out attribute)</a>
-</li>
       <li><a href="pages/documentation/doc_simulation.html#simulator.alg_sim_out.wp">wp (simulator.alg_sim_out attribute)</a>
 
       <ul>

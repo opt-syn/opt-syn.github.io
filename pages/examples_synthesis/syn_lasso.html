@@ -49,8 +49,6 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Games with Delay" href="syn_games_with_delay.html" />
-    <link rel="prev" title="Channel Memory" href="syn_channel_memory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -152,6 +150,8 @@
       
       
       
+        
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -196,7 +196,7 @@
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/index_get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../how_it_works/index_how_it_works.html">How it Works</a></li>
@@ -216,7 +216,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../usage/solve.html">Solve and Validate</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../examples.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples_simulation/index_example_simulation.html">Simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../examples_simulation/sim_dr.html">Noisy Douglas Rachford</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_simulation/sim_dr_game.html">Nash Equilibrium Seeking</a></li>
@@ -238,9 +238,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples_analysis/ana_tracking.html">Tracking an Oscillator</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="index_example_synthesis.html">Synthesis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="syn_server.html">Remote Quadratic Programming</a></li>
@@ -469,8 +468,8 @@
   <section class="tex2jax_ignore mathjax_ignore" id="lasso">
 <h1>LASSO<a class="headerlink" href="#lasso" title="Link to this heading">#</a></h1>
 <p>This demonstration applies Synthesis towards LASSO <a class="footnote-reference brackets" href="#footcite-tibshirani1996regression" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> solvers. The hard LASSO problem is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a2f73e2-a9a7-4fda-a1fc-a203ee0caff1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-2a2f73e2-a9a7-4fda-a1fc-a203ee0caff1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-deb36d37-f862-4400-9a2e-263e9edcd17f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-deb36d37-f862-4400-9a2e-263e9edcd17f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \beta^* \in \argmin_{\norm{\beta}_1 \leq \tau} \frac{1}{2}\norm{E\beta - b}_2^2.
 \end{align}\]</div>
 <p>The LASSO problem with <span class="math notranslate nohighlight">\(E \in \R^{m \times n}\)</span> is overparameterized if <span class="math notranslate nohighlight">\(n &gt; m\)</span>, and is  underparameterized if <span class="math notranslate nohighlight">\(n &lt; m\)</span>. It is assumed that <span class="math notranslate nohighlight">\(E\)</span> has full row rank.</p>
@@ -498,7 +497,7 @@ In the underparameterized regime, the strongly convex <span class="math notransl
 
 <span class="c">%% describe the operators</span>
 <span class="c">%define the data matrix</span>
-<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">'twister'</span><span class="p">);</span>
+<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;twister&#39;</span><span class="p">);</span>
 <span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
 <span class="n">A_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="nb">randn</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
 <span class="n">b_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="nb">randn</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="nb">rand</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
@@ -550,7 +549,7 @@ In the underparameterized regime, the strongly convex <span class="math notransl
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">Code for Explicit Overparameterized LASSO</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% describe the operators</span>
-<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">'twister'</span><span class="p">);</span>
+<span class="nb">rng</span><span class="p">(</span><span class="mi">430</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;twister&#39;</span><span class="p">);</span>
 
 <span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="n">A_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">randn</span><span class="p">(</span><span class="mf">1.3</span><span class="o">*</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
@@ -610,24 +609,6 @@ In the underparameterized regime, the strongly convex <span class="math notransl
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="syn_channel_memory.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Channel Memory</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="syn_games_with_delay.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Games with Delay</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

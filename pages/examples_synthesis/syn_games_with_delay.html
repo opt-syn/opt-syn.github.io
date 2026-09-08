@@ -505,7 +505,7 @@ Each Synthesis is accompanied by an algorithm Simulation starting from an initia
 </figure>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">Code for Nash Equilibrium Seeking</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">rng</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s">'twister'</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">rng</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;twister&#39;</span><span class="p">);</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c">%define the Linear Quadratic Game</span>
 <span class="linenos"> 4</span><span class="n">N_agent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c">%number of agents</span>
@@ -578,7 +578,7 @@ Each Synthesis is accompanied by an algorithm Simulation starting from an initia
 <span class="linenos">71</span><span class="w">    </span>
 <span class="linenos">72</span><span class="w">    </span><span class="n">sim_out</span><span class="p">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="n">sim</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
 <span class="linenos">73</span><span class="w">    </span><span class="n">plt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">alg_plotter</span><span class="p">(</span><span class="n">sim_out</span><span class="p">);</span>
-<span class="linenos">74</span><span class="w">    </span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">({</span><span class="s">'x'</span><span class="p">,</span><span class="w"> </span><span class="s">'w'</span><span class="p">,</span><span class="w"> </span><span class="s">'res_w'</span><span class="p">,</span><span class="w"> </span><span class="s">'payoff'</span><span class="p">,</span><span class="w"> </span><span class="s">'z'</span><span class="p">,</span><span class="w"> </span><span class="s">'res_z'</span><span class="p">},</span><span class="w"> </span><span class="nb">i</span><span class="p">);</span>
+<span class="linenos">74</span><span class="w">    </span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">({</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;res_w&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;payoff&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;z&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;res_z&#39;</span><span class="p">},</span><span class="w"> </span><span class="nb">i</span><span class="p">);</span>
 <span class="linenos">75</span><span class="k">end</span>
 </pre></div>
 </div>

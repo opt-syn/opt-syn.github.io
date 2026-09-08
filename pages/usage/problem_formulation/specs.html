@@ -240,7 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples_synthesis/index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples_synthesis/syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples_synthesis/syn_lasso.html">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples_synthesis/syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples_synthesis/syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples_synthesis/syn_server.html">Remote Quadratic Programming</a></li>
@@ -461,7 +460,6 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ergodic-convergence">Ergodic Convergence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for Time-Varying Dynamical Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More Specifications</a></li>
 </ul>
@@ -549,7 +547,7 @@ initial condition <span class="math notranslate nohighlight">\(x_0\)</span> ther
   \mat{c}{w_{p,k} \\ z_{p,k}} \; +  \; \epsilon \rho^{-2k} \norm{w_{p, k}}_2^2 \leq 0.
 \end{align*}\end{split}\]</div>
 <p>Quadratic performance specifications are imposed by</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">M</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="o">'</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">];</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">M</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="o">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">];</span>
 <span class="linenos">2</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_quad</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -638,26 +636,32 @@ output channels must have the same length.</p>
 </pre></div>
 </div>
 <p>Stochastic sensitivity is only certified if  <span class="math notranslate nohighlight">\(\rho = 1\)</span> and the oracle input <span class="math notranslate nohighlight">\(z\)</span> is independent of <span class="math notranslate nohighlight">\(w_p\)</span>. In contrast, the <span class="math notranslate nohighlight">\(\ell_2\)</span> gain is usable if these conditions are violated.</p>
-</section>
-<section id="ergodic-convergence">
-<h2>Ergodic Convergence<a class="headerlink" href="#ergodic-convergence" title="Link to this heading">#</a></h2>
-<p>Ergodic convergence arises in the optimization setting where all operators are subdifferentials (<span class="math notranslate nohighlight">\(F_i = \partial f_i\)</span>), and their operators classes are <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_sml</span></code>, <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_pcc</span></code>, or <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_quad</span></code>.</p>
-<p>An algorithm with no repeated operator evaluations satisfies ergodic convergence if there exists a <span class="math notranslate nohighlight">\(\gamma&gt;0\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum_{i=1}^s \left[f_i(z^i_k) - f_i(z^{*,i}(x_0))\right] - (w^*)^\top (z_k - z^{*}(x_0)) \leq \frac{\gamma}{k+1} \norm{x_0 - x^*(x_0)}_2^2 &amp; &amp; \forall k \in \N.
-\end{align*}\]</div>
-<p>The left-hand side  is a duality gap, and is equal to 0 at optimality.
-This  formulation of ergodic convergence in duality gap originates from  <a class="footnote-reference brackets" href="#footcite-upadhyaya2025automated" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> (Section 4.1.2).</p>
-<p>Ergodic convergence is called by</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">spec</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_ergodic</span><span class="p">();</span>
-</pre></div>
-</div>
-<p>Ergodic convergence is weaker than linear convergence. It can certify properties of convex optimization algorithms, whereas establishment of global linear convergence requires strong convexity. Ergodic convergence should only be used if all performance specifications have <span class="math notranslate nohighlight">\(\rho=1\)</span>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In the current implementation, Ergodic convergence requires nonstrict feasibility of linear matrix inequalities. In numerical experiments, the maximal eigenvalue of a negative-semidefinite-constrained block is <span class="math notranslate nohighlight">\(\approx 10^{-12}\)</span>, which is not less than or equal to  <span class="math notranslate nohighlight">\(0\)</span>. Future developments will try to patch this feasibility issue, in the meantime use with caution.</p>
-</div>
+<!-- 
+ 
+## Ergodic Convergence
+
+Ergodic convergence arises in the optimization setting where all operators are subdifferentials ($F_i = \partial f_i$), and their operators classes are {class}`op_sml`, {class}`op_pcc`, or {class}`op_quad`.
+
+An algorithm with no repeated operator evaluations satisfies ergodic convergence if there exists a $\gamma>0$ such that 
+```{math}
+\begin{align*}
+\sum_{i=1}^s \left[f_i(z^i_k) - f_i(z^{*,i}(x_0))\right] - (w^*)^\top (z_k - z^{*}(x_0)) \leq \frac{\gamma}{k+1} \norm{x_0 - x^*(x_0)}_2^2 & & \forall k \in \N.
+\end{align*}
+```
+The left-hand side  is a duality gap, and is equal to 0 at optimality. 
+This  formulation of ergodic convergence in duality gap originates from  {footcite}`upadhyaya2025automated` (Section 4.1.2).
+
+
+Ergodic convergence is called by 
+```matlab
+spec = spec_ergodic();
+```
+
+Ergodic convergence is weaker than linear convergence. It can certify properties of convex optimization algorithms, whereas establishment of global linear convergence requires strong convexity. Ergodic convergence should only be used if all performance specifications have $\rho=1$. 
+
+:::{warning}
+In the current implementation, Ergodic convergence requires nonstrict feasibility of linear matrix inequalities. In numerical experiments, the maximal eigenvalue of a negative-semidefinite-constrained block is $\approx 10^{-12}$, which is not less than or equal to  $0$. Future developments will try to patch this feasibility issue, in the meantime use with caution.
+::: -->
 </section>
 <section id="performance-for-time-varying-dynamical-systems">
 <h2>Performance for Time-Varying Dynamical Systems<a class="headerlink" href="#performance-for-time-varying-dynamical-systems" title="Link to this heading">#</a></h2>
@@ -683,10 +687,6 @@ This  formulation of ergodic convergence in duality gap originates from  <a clas
 <aside class="footnote brackets" id="footcite-van2021speed" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>Bryan Van Scoy and Laurent Lessard. The speed-robustness trade-off for first-order methods with additive gradient noise. <em>arXiv preprint arXiv:2109.05059</em>, 2021.</p>
-</aside>
-<aside class="footnote brackets" id="footcite-upadhyaya2025automated" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
-<p>Manu Upadhyaya, Sebastian Banert, Adrien B Taylor, and Pontus Giselsson. Automated tight Lyapunov analysis for first-order methods. <em>Mathematical Programming</em>, 209(1):133–170, 2025.</p>
 </aside>
 </aside>
 
@@ -745,7 +745,6 @@ This  formulation of ergodic convergence in duality gap originates from  <a clas
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ergodic-convergence">Ergodic Convergence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for Time-Varying Dynamical Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More Specifications</a></li>
 </ul>
