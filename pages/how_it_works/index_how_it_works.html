@@ -240,7 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples_synthesis/index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_lasso.html">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_server.html">Remote Quadratic Programming</a></li>
@@ -286,6 +285,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../resources/resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
 </ul>
 
     </div>
@@ -488,7 +488,7 @@
 <p>Zero-inclusion problems include solution concepts such as variational inequalities and constrained optimization problems. As an example, the zero inclusion problem <span class="math notranslate nohighlight">\(0 \in \sum_{i=1}^s \partial f_i(\beta^*) \)</span> is a necessary optimality principle for the composite optimization problem.</p>
 <section id="optimization-algorithms">
 <h2>Optimization Algorithms<a class="headerlink" href="#optimization-algorithms" title="Link to this heading">#</a></h2>
-<p>An optimization algorithm is a procedure that generates a sequence of iterates <span class="math notranslate nohighlight">\((w_k, z_k)_{k \in \N}\)</span> satisfying <span class="math notranslate nohighlight">\(w^i_k \in F^i(z^i_k)\)</span>.</p>
+<p>An optimization algorithm is a procedure that generates a sequence of iterates <span class="math notranslate nohighlight">\((w_k, z_k)_{k \in \N}\)</span> satisfying <span class="math notranslate nohighlight">\(w^i_k \in F_i(z^i_k)\)</span>.</p>
 <p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems <a class="footnote-reference brackets" href="#footcite-wang2011control" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -530,11 +530,11 @@
 </section>
 <section id="checking-convergence">
 <h2>Checking Convergence<a class="headerlink" href="#checking-convergence" title="Link to this heading">#</a></h2>
-<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: Robust Stability and the Solvability of Regulator Equations. This theory holds for includion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> <a class="footnote-reference brackets" href="#footcite-miller2026structure" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
-<p>Robust Stability ensures convergence to 0 if 0 is the solution to the inclusion problem (<span class="math notranslate nohighlight">\(0 \in F^i(0)\)</span> holds for all operators <span class="math notranslate nohighlight">\(F^i\)</span>). Solvability of the Regulator Equations ensures that a nonzero solution to the inclusion problem can be shifted into a zero solution of an zero-centered problem (error coordinates).</p>
+<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: Robust Stability and the Solvability of Regulator Equations. This theory holds for inclusion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> <a class="footnote-reference brackets" href="#footcite-miller2026structure" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>Robust Stability ensures convergence to 0 if 0 is the solution to the inclusion problem (<span class="math notranslate nohighlight">\(0 \in F_i(0)\)</span> holds for all operators <span class="math notranslate nohighlight">\(F_i\)</span>). Solvability of the Regulator Equations ensures that a nonzero solution to the inclusion problem can be shifted into a zero solution of a zero-centered problem (error coordinates).</p>
 <section id="condition-1-robust-stability">
 <h3>Condition 1: Robust Stability<a class="headerlink" href="#condition-1-robust-stability" title="Link to this heading">#</a></h3>
-<p>Assume that the algorithm is well-posed, and the operator inclusion problem <span class="math notranslate nohighlight">\(0\in \sum_{i=1}^s F^i(\beta^*)\)</span> is uniquely solved by the pair <span class="math notranslate nohighlight">\((\beta^*, w^*) = (0, 0)\)</span>  Then for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>, the subsequent trajectories of</p>
+<p>Assume that the algorithm is well-posed, and the operator inclusion problem <span class="math notranslate nohighlight">\(0\in \sum_{i=1}^s F_i(\beta^*)\)</span> is uniquely solved by the pair <span class="math notranslate nohighlight">\((\beta^*, w^*) = (0, 0)\)</span>  Then for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>, the subsequent trajectories of</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
 \mat{c}{ x_{k+1} \hl {z}_k} &amp;= \mat{c|c}{ \Acl &amp;  \Bcl \hl \Ccl &amp; \Dcl} \mat{c}{ x_{k} \hl {w}_k}, &amp; {w}_k \in  F( {z_k}),

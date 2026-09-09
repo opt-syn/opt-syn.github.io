@@ -240,7 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../examples_synthesis/index_example_synthesis.html">Synthesis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_channel_memory.html">Channel Memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_lasso.html">LASSO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_games_with_delay.html">Games with Delay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_unstable_network.html">Unstable Network</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples_synthesis/syn_server.html">Remote Quadratic Programming</a></li>
@@ -286,6 +285,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../resources/resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
 </ul>
 
     </div>
@@ -612,7 +612,7 @@ A plot of the signals (<span class="math notranslate nohighlight">\(w\)</span>, 
 \Ccl_z &amp; \Dcl_{zw} &amp; \Dcl_{z w_p}  \\
 \Ccl_{z_p} &amp; \Dcl_{z_p w} &amp; \Dcl_{z_p w_p}} \mat{c}{x_k \hl w_k \\ w_{p k}},
 \end{align*}\end{split}\]</div>
-<p>Well-posedness requires that the map <span class="math notranslate nohighlight">\(H: = (F^{-1} - \Dcl{zw})^{-1}\)</span> is globally defined and continuous.</p>
+<p>Well-posedness requires that the map <span class="math notranslate nohighlight">\(H: = (F^{-1} - \Dcl_{zw})^{-1}\)</span> is globally defined and continuous.</p>
 <p>The closed loop state <span class="math notranslate nohighlight">\(x\)</span> is the concatenation <span class="math notranslate nohighlight">\(x = [x^N, x^c]\)</span>.</p>
 <p><code class="xref mat mat-class docutils literal notranslate"><span class="pre">alg_sim</span></code> execution using <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">sim()</span></code>  requires   well-posedness and a block-triangular information structure (closed loop <span class="math notranslate nohighlight">\(\Dcl\)</span> matrix).</p>
 <p>Under these conditions, the System can be partitioned as</p>
