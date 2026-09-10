@@ -6,9 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>opt-syn &#8212; opt-syn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - opt-syn</title>
   
   
   
@@ -43,19 +41,18 @@
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+  <script src="_static/searchtools.js"></script>
+  <script src="_static/language_data.js"></script>
+  <script src="searchindex.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Get Started" href="pages/get_started/index_get_started.html" />
+    <link rel="search" title="Search" href="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
   
     
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="searchindex.js"></script>
   
   </head>
   <body data-default-mode="">
@@ -75,7 +72,7 @@
   <dialog id="pst-search-dialog">
     
 <form class="bd-search d-flex align-items-center"
-      action="search.html"
+      action="#"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -166,7 +163,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -191,8 +188,8 @@
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Home</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/get_started/index_get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/how_it_works/index_how_it_works.html">How it Works</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="pages/usage/index_usage.html">Usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -345,54 +342,6 @@
 
 
 
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="_sources/index.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
@@ -434,60 +383,41 @@
 </div>
               
               
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1><span style="color:#5D93BF">opt</span>-syn</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-        </div>
-    </div>
-</div>
-
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="opt-syn">
-<h1><span style="color:#5D93BF">opt</span>-syn<a class="headerlink" href="#opt-syn" title="Link to this heading">#</a></h1>
-<p>Analysis and Synthesis of First-Order Algorithms (MATLAB)</p>
-<hr class="docutils" />
-<p><span style="color:#5D93BF">opt</span>-syn: <span style="color:#5D93BF">optimization</span> (algorithm) synthesis.</p>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p><span style="color:#5D93BF">opt</span>-syn  analyzes and synthesizes first-order algorithms by using methods from robust control theory.</p>
-<p>Analysis bounds performance measures such as  worst-case convergence rates and gains for error amplification. Synthesis tries to design an optimization algorithm satisfying these desired performance constraints.
-Analysis and Synthesis may be performed for algorithms arising in dynamic environments,  including cases  with constant or time-varying delays, channel memory, and cross-talk.</p>
-<p>Both the Analysis and Synthesis tasks are posed as convex problems with  Linear Matrix Inequality constraints. These problems are posed and solved using <a class="reference external" href="https://www.mathworks.com/help/robust/ug/introduction.html">LMILab</a>.</p>
-</section>
-<section id="get-started">
-<h2>Get Started<a class="headerlink" href="#get-started" title="Link to this heading">#</a></h2>
-<p>For installation and  examples of algorithm  Analysis and Synthesis workflows, see  <a class="reference internal" href="pages/get_started/index_get_started.html"><span class="doc">Get Started</span></a>.</p>
-</section>
-<section id="contributors">
-<h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jarmill.github.io/">Jared Miller</a>: Creator and maintainer</p></li>
-<li><p><a class="reference external" href="https://www.ist.uni-stuttgart.de/institute/team/Jakob-00004/">Fabian Jakob</a>: Creator</p></li>
-<li><p>Manuel Zobel: Creator</p></li>
-<li><p><a class="reference external" href="https://www.imng.uni-stuttgart.de/institute/team/Scherer-00006/">Carsten Scherer</a>: Creator</p></li>
-<li><p><a class="reference external" href="https://www.ist.uni-stuttgart.de/institute/team/Iannelli/">Andrea Iannelli</a>: Creator</p></li>
-</ul>
-<p>Contact <a class="reference external" href="https://jarmill.github.io/">Jared Miller</a> for questions, issues, feedback, and suggestions.</p>
-</section>
-<section id="funding">
-<h2>Funding<a class="headerlink" href="#funding" title="Link to this heading">#</a></h2>
-<p>Development of <span style="color:#5D93BF">opt</span>-syn was in part supported by  Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy - EXC 2075 – 390740016 and by the Stuttgart Center for Simulation Science (SimTech)</p>
-<div class="toctree-wrapper compound">
-</div>
-</section>
-</section>
-
-
-                </article>
-              
+  <div class="bd-search-container">
+    <h1>Search</h1>
+    <noscript>
+      <div class="admonition error">
+        <p class="admonition-title">Error</p>
+        <p>Please activate JavaScript to enable the search functionality.</p>
+      </div>
+    </noscript>
+    
+<form class="bd-search d-flex align-items-center"
+      action="#"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    <div id="search-results"></div>
+  </div>
+  <script>
+    // Activate the search field on page load
+    let searchInput = document.querySelector("form.bd-search input");
+    if (searchInput) {
+        searchInput.focus();
+        searchInput.select();
+        console.log("[PST]: Set focus on search field.");
+    }
+  </script>
 
               
               
@@ -496,15 +426,6 @@ Analysis and Synthesis may be performed for algorithms arising in dynamic enviro
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="pages/get_started/index_get_started.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Get Started</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
