@@ -491,9 +491,9 @@
 <p>An optimization algorithm is a procedure that generates a sequence of iterates <span class="math notranslate nohighlight">\((w_k, z_k)_{k \in \N}\)</span> satisfying <span class="math notranslate nohighlight">\(w^i_k \in F_i(z^i_k)\)</span>.</p>
 <p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems <a class="footnote-reference brackets" href="#footcite-wang2011control" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
- \mat{c}{x_{k+1} \hl z_k} &amp;= \mat{c|cc}{I &amp; -\gamma \lambda I \hl I &amp; 0 }   \mat{c}{x_{k} \hl w_k^1 \\ w_k^2}, &amp; \mat{c}{w_k^1 \\ w_k^2} \in  \mat{c}{F_1(z_k^1)},
-\end{align*}\end{split}\]</div>
+\[\begin{align*}
+ \mat{c}{x_{k+1} \hl z_k} &amp;= \mat{c|c}{I &amp; -\gamma \lambda I \hl I &amp; 0 }   \mat{c}{x_{k} \hl w_k}, &amp; \mat{c}{w_k} \in  \mat{c}{F_1(z_k)},
+\end{align*}\]</div>
 <p>and the   Douglas-Rachford algorithm <a class="footnote-reference brackets" href="#footcite-douglas1956numerical" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>   with parameters <span class="math notranslate nohighlight">\(\gamma, \lambda \geq 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
