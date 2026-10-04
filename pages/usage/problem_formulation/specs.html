@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../../../_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>Performance Specifications &#8212; opt-syn</title>
+    <title>Performance specifications &#8212; opt-syn</title>
   
   
   
@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Configuration" href="config.html" />
-    <link rel="prev" title="Problem Setup" href="index_problem_formulation.html" />
+    <link rel="prev" title="Problem setup" href="index_problem_formulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -198,22 +198,22 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../get_started/index_get_started.html">Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../how_it_works/index_how_it_works.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started/index_get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="system/index_system.html">Build the System</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="system/bind.html">Repeated Operator Evaluations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="system/tracking.html">Time-Varying Optimal Solutions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="system/dynamics.html">Time-Varying Dynamical Systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation.html">Simulate</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="index_problem_formulation.html">Problem Setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Performance Specifications</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index_problem_formulation.html">Problem setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Performance specifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="config.html">Configuration</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../solve.html">Solve and Validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solve.html">Solve and validate</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -443,7 +443,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Performance Specifications</h1>
+    <h1>Performance specifications</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -453,16 +453,16 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence">Linear Convergence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic Performance</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-stability">ℓ2 Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-gain">ℓ2 Gain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence">Linear convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-stability"><span class="math notranslate nohighlight">\(\ell_2\)</span>-stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-gain"><span class="math notranslate nohighlight">\(\ell_2\)</span>-gain</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passivity">Passivity</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for Time-Varying Dynamical Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More Specifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic sensitivity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for time-varying dynamical systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More specifications</a></li>
 </ul>
             </nav>
         </div>
@@ -475,8 +475,8 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="performance-specifications">
-<h1>Performance Specifications<a class="headerlink" href="#performance-specifications" title="Link to this heading">#</a></h1>
-<p>Performance specifications describe constraints on the behavior of the algorithm. Analysis attempts to certify that an algorithm obeys the specification, and Synthesis tries to form an algorithm that obeys the specifications.</p>
+<h1>Performance specifications<a class="headerlink" href="#performance-specifications" title="Link to this heading">#</a></h1>
+<p>Performance specifications describe constraints on the behavior of the algorithm. Analysis attempts to certify that an algorithm obeys the specification, and synthesis tries to form an algorithm that obeys the specifications.</p>
 <p>Every specification is a condition on the performance channel <span class="math notranslate nohighlight">\((w_p, z_p)\)</span> of the
 <a class="reference internal" href="../../documentation/plants/doc_genplant.html"><span class="doc">generalized plant</span></a>.</p>
 <p>All specifications have the fields</p>
@@ -488,13 +488,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iwp</span></code></p></td>
-<td><p>indices of performance input <span class="math notranslate nohighlight">\(w_p\)</span></p></td>
+<td><p>Indices of performance input <span class="math notranslate nohighlight">\(w_p\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">izp</span></code></p></td>
-<td><p>indices of performance output <span class="math notranslate nohighlight">\(z_p\)</span></p></td>
+<td><p>Indices of performance output <span class="math notranslate nohighlight">\(z_p\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">target</span></code></p></td>
-<td><p>should this specification be minimized</p></td>
+<td><p>Should this specification be minimized</p></td>
 </tr>
 </tbody>
 </table>
@@ -503,7 +503,7 @@
 Choosing <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span> imposes that the property holds at an exponential rate.</p>
 <p>Refer to the  <a class="reference internal" href="../../documentation/doc_specs.html"><span class="doc">Performance Specification Documentation</span></a> for information about the specifications and their interfaces.</p>
 <section id="linear-convergence">
-<h2>Linear Convergence<a class="headerlink" href="#linear-convergence" title="Link to this heading">#</a></h2>
+<h2>Linear convergence<a class="headerlink" href="#linear-convergence" title="Link to this heading">#</a></h2>
 <p>This imposes exponential stability of the iterates at rate <span class="math notranslate nohighlight">\(\rho\)</span>. For every
 initial condition <span class="math notranslate nohighlight">\(x_0\)</span> there is a fixed point <span class="math notranslate nohighlight">\((x^*(x_0), w^*(x_0), z^*(x_0))\)</span> with</p>
 <div class="math notranslate nohighlight">
@@ -524,13 +524,13 @@ initial condition <span class="math notranslate nohighlight">\(x_0\)</span> ther
 <p>Infinite-horizon exponential stability is that for <span class="math notranslate nohighlight">\(x_0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-\lim_{k \rightarrow \infty}\rho^{-k}\mav{c}{x_k - x^*(x_0) \\ w_k - w^*(x_0) \\ z_k - z^*(x_0)}_2
+\lim_{k \rightarrow \infty}\rho^{-k}\mav{c}{x_k - x^*(x_0) \\ w_k - w^*(x_0) \\ z_k - z^*(x_0)}_2 = 0
 \end{align*}\end{split}\]</div>
 </section>
 <section id="quadratic-performance">
-<h2>Quadratic Performance<a class="headerlink" href="#quadratic-performance" title="Link to this heading">#</a></h2>
+<h2>Quadratic performance<a class="headerlink" href="#quadratic-performance" title="Link to this heading">#</a></h2>
 <p>Several  specifications are special cases of general <strong>quadratic supply-rate</strong> conditions on
-<span class="math notranslate nohighlight">\((w_p, z_p)\)</span>. These conditions must be respected for all performance input sequence <span class="math notranslate nohighlight">\((w_{p, k})_{k \in \N}\)</span> with a finite <span class="math notranslate nohighlight">\(\rho\)</span>-weighted ℓ2 norm  <span class="math notranslate nohighlight">\((\sum_{k=0}^T -\epsilon \rho^{-2k} \norm{w_{p, k}}_2^2 &lt; \infty)\)</span>.</p>
+<span class="math notranslate nohighlight">\((w_p, z_p)\)</span>. These conditions must be respected for all performance input sequence <span class="math notranslate nohighlight">\((w_{p, k})_{k \in \N}\)</span> with a finite <span class="math notranslate nohighlight">\(\rho\)</span>-weighted <span class="math notranslate nohighlight">\(\ell_2\)</span>-norm  <span class="math notranslate nohighlight">\((\sum_{k=0}^\infty \rho^{-2k} \norm{w_{p, k}}_2^2 &lt; \infty)\)</span>.</p>
 <p>A quadratic supply rate condition with respect to matrices <span class="math notranslate nohighlight">\((Q, S, R)\)</span> is the existence of an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -552,32 +552,32 @@ initial condition <span class="math notranslate nohighlight">\(x_0\)</span> ther
 <span class="linenos">2</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_quad</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The Synthesis procedure requires that <span class="math notranslate nohighlight">\(Q = Q^\top\)</span> and <span class="math notranslate nohighlight">\(R \prec 0\)</span>.</p>
-<p>The below specifications are all specific instances of quadratic performance:</p>
-<section id="l2-stability">
-<h3>ℓ2 Stability<a class="headerlink" href="#l2-stability" title="Link to this heading">#</a></h3>
+<p>The Synthesis procedure requires that <span class="math notranslate nohighlight">\(Q = Q^\top\)</span> and <span class="math notranslate nohighlight">\(R \succ 0\)</span>.</p>
+<p>The following specifications are all specific instances of quadratic performance.</p>
+<section id="ell-2-stability">
+<h3><span class="math notranslate nohighlight">\(\ell_2\)</span>-stability<a class="headerlink" href="#ell-2-stability" title="Link to this heading">#</a></h3>
 <p><em>Stability and ISS.</em> Certifies that the performance input has a bounded effect on the
-state.</p>
+state,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \sum_{k=0}^T \rho^{-2k} \norm{x_k - x^*(x_0)}_2^2 \leq \gamma\norm{x_0 - x^*(x_0)}_2^2
   + \gamma \sum_{k=0}^T \rho^{-2k} \norm{w_{p, k}}_2^2, &amp; &amp; \forall k \in \N.
 \end{align*}\]</div>
-<p>If <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span>, then ℓ2 stability implies an Input-to-State Stability property <a class="footnote-reference brackets" href="#footcite-sontag1989smooth" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, <a class="footnote-reference brackets" href="#footcite-schwenkel2026multi" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>If <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span>, then <span class="math notranslate nohighlight">\(\ell_2\)</span>-stability implies an input-to-state stability property <a class="footnote-reference brackets" href="#footcite-sontag1989smooth" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, <a class="footnote-reference brackets" href="#footcite-schwenkel2026multi" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \norm{x_k - x^*(x_0)}_2^2 \leq \gamma\, \rho^{2k} \norm{x_0 - x^*(x_0)}_2^2
   + \frac{\gamma \rho^2}{1-\rho^2} \max_{t \in 0, \ldots, k} \norm{w_{p, t}}_2^2, &amp; &amp; \forall k \in \N.
 \end{align*}\]</div>
-<p>Linear convergence is recovered from Input-to-State Stability when the
+<p>Linear convergence is recovered from input-to-state stability when the
 disturbance vanishes (<span class="math notranslate nohighlight">\(w_p= 0\)</span>).</p>
 <p>Use this when you need the iterates to stay
 bounded and convergent under noise but do not need a specific gain; for a gain bound, use
-<span class="math notranslate nohighlight">\(\ell_2\)</span> gain instead.</p>
+<span class="math notranslate nohighlight">\(\ell_2\)</span>-gain instead.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_l2</span><span class="p">(</span><span class="n">iwp</span><span class="p">);</span><span class="w">        </span><span class="c">% no performance output; optional bound: spec_l2(iwp, MU)</span>
 </pre></div>
 </div>
-<p>Infinite-horizon  ℓ2 stability is</p>
+<p>Infinite-horizon  <span class="math notranslate nohighlight">\(\ell_2\)</span>-stability is</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \limsup_{T \to \infty}
@@ -585,17 +585,17 @@ bounded and convergent under noise but do not need a specific gain; for a gain b
   \; &lt; \; \gamma^2.
 \end{align*}\]</div>
 </section>
-<section id="l2-gain">
-<h3>ℓ2 Gain<a class="headerlink" href="#l2-gain" title="Link to this heading">#</a></h3>
-<p><em>Energy-to-energy gain.</em> Bounds the induced ℓ2 gain <span class="math notranslate nohighlight">\(\gamma\)</span> from the performance
+<section id="ell-2-gain">
+<h3><span class="math notranslate nohighlight">\(\ell_2\)</span>-gain<a class="headerlink" href="#ell-2-gain" title="Link to this heading">#</a></h3>
+<p><em>Energy-to-energy gain.</em> Bounds the induced <span class="math notranslate nohighlight">\(\ell_2\)</span>-gain <span class="math notranslate nohighlight">\(\gamma\)</span> from the performance
 input to the performance output,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \limsup_{T \to \infty}
-  \frac{\sum_{k=0}^{T} \rho^{2k} \norm{z_{p,k}}_2^2}{   \sum_{k=0}^{T} \rho^{-2k} \norm{w_{p,k}}^2_2}
+  \frac{\sum_{k=0}^{T} \rho^{-2k} \norm{z_{p,k}}_2^2}{   \sum_{k=0}^{T} \rho^{-2k} \norm{w_{p,k}}^2_2}
   \; &lt; \; \gamma^2.
 \end{align*}\]</div>
-<p>For a linear system this, this is the <span class="math notranslate nohighlight">\(H_\infty\)</span> gain under a <span class="math notranslate nohighlight">\(\rho\)</span>-weighting. The ℓ2 gain is an infinite-horizon penalty.</p>
+<p>For linear systems this is the <span class="math notranslate nohighlight">\(\rho\)</span>-weighted <span class="math notranslate nohighlight">\(H_\infty\)</span>-gain. The <span class="math notranslate nohighlight">\(\ell_2\)</span>-gain is an infinite-horizon penalty.</p>
 <p>Use it to quantify how strongly a
 disturbance at <span class="math notranslate nohighlight">\(w_p\)</span> (for example, noise in the gradient evaluations) is amplified at a
 tracked output <span class="math notranslate nohighlight">\(z_p\)</span>.</p>
@@ -617,9 +617,7 @@ input passivity index <span class="math notranslate nohighlight">\(\nu_w\)</span
   \; \geq \;
   \sum_{k=0}^{T} \big( \nu_w \norm{w_{p,k}}_2^2 + \nu_z \norm{z_{p,k}}_2^2 \big).
 \end{align*}\]</div>
-<p>Setting both indices to zero requests standard passivity; positive indices request the
-correspondingly stronger input- or output-strict passivity properties. The performance input and
-output channels must have the same length.</p>
+<p>Setting both indices to zero corresponds to classical passivity. Positive indices correspond to the stronger input- or output-strict passivity property, respectively. The performance input and output channels must have the same length.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">% ind_w = nu_w, ind_z = nu_z</span>
 <span class="linenos">2</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_passivity</span><span class="p">(</span><span class="n">ind_w</span><span class="p">,</span><span class="w"> </span><span class="n">ind_z</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span><span class="w">   </span>
 </pre></div>
@@ -627,7 +625,7 @@ output channels must have the same length.</p>
 </section>
 </section>
 <section id="stochastic-sensitivity">
-<h2>Stochastic Sensitivity<a class="headerlink" href="#stochastic-sensitivity" title="Link to this heading">#</a></h2>
+<h2>Stochastic sensitivity<a class="headerlink" href="#stochastic-sensitivity" title="Link to this heading">#</a></h2>
 <p>Stochastic sensitivity imposes a mean-square boundedness requirement on the performance output <a class="footnote-reference brackets" href="#footcite-van2021speed" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. The performance input sequence <span class="math notranslate nohighlight">\(\{w_{p, k}\}\)</span> is a sequence of i.i.d. random variables. These inputs are zero-mean and bounded: there exists a known <span class="math notranslate nohighlight">\(\Omega \succ 0\)</span> such that  <span class="math notranslate nohighlight">\(\E[w_{p, k}] = 0\)</span> and <span class="math notranslate nohighlight">\(\E[w_{p, k} w_{p, k}^\top] \preceq \Omega\)</span> at all <span class="math notranslate nohighlight">\(k \in \N\)</span>. The algorithm achieves stochastic sensitivity with gain <span class="math notranslate nohighlight">\(\gamma \geq 0\)</span> if for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span> and performance inputs <span class="math notranslate nohighlight">\(w_p\)</span>, it holds that</p>
 <div class="math notranslate nohighlight">
 \[ \limsup_{T \rightarrow \infty} \frac{1}{T} \sum_{k=0}^{T}
@@ -636,7 +634,7 @@ output channels must have the same length.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_h2</span><span class="p">(</span><span class="n">GAIN</span><span class="p">,</span><span class="w"> </span><span class="n">Omega</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span><span class="w">   </span><span class="c">%GAIN = gamma</span>
 </pre></div>
 </div>
-<p>Stochastic sensitivity is only certified if  <span class="math notranslate nohighlight">\(\rho = 1\)</span> and the oracle input <span class="math notranslate nohighlight">\(z\)</span> is independent of <span class="math notranslate nohighlight">\(w_p\)</span>. In contrast, the <span class="math notranslate nohighlight">\(\ell_2\)</span> gain is usable if these conditions are violated.</p>
+<p>Stochastic sensitivity is only certified if  <span class="math notranslate nohighlight">\(\rho = 1\)</span> and the oracle input <span class="math notranslate nohighlight">\(z\)</span> is independent of <span class="math notranslate nohighlight">\(w_p\)</span>. In contrast, the <span class="math notranslate nohighlight">\(\ell_2\)</span>-gain is usable if these conditions are violated.</p>
 <!-- 
  
 ## Ergodic Convergence
@@ -665,14 +663,14 @@ In the current implementation, Ergodic convergence requires nonstrict feasibilit
 ::: -->
 </section>
 <section id="performance-for-time-varying-dynamical-systems">
-<h2>Performance for Time-Varying Dynamical Systems<a class="headerlink" href="#performance-for-time-varying-dynamical-systems" title="Link to this heading">#</a></h2>
+<h2>Performance for time-varying dynamical systems<a class="headerlink" href="#performance-for-time-varying-dynamical-systems" title="Link to this heading">#</a></h2>
 <p>The specific performance constraints imposed by <code class="docutils literal notranslate"><span class="pre">specs</span></code> may vary for <a class="reference internal" href="system/dynamics.html"><span class="doc">systems with time-variations</span></a>.</p>
 <p>All specifications on this page are used as presented for LTI, periodic, and periodic-orbit systems.</p>
 <p>For switched systems, a performance specification in <code class="docutils literal notranslate"><span class="pre">specs</span></code> imposes a  worst-case bound over all possible switching sequences.</p>
 </section>
 <section id="more-specifications">
-<h2>More Specifications<a class="headerlink" href="#more-specifications" title="Link to this heading">#</a></h2>
-<p>We plan to implement further performance criteria for both Analysis and Synthesis.</p>
+<h2>More specifications<a class="headerlink" href="#more-specifications" title="Link to this heading">#</a></h2>
+<p>We plan to implement further performance criteria for both analysis and synthesis.</p>
 </section>
 </section>
 <hr class="footnotes docutils" />
@@ -708,7 +706,7 @@ In the current implementation, Ergodic convergence requires nonstrict feasibilit
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Problem Setup</p>
+        <p class="prev-next-title">Problem setup</p>
       </div>
     </a>
     <a class="right-next"
@@ -738,16 +736,16 @@ In the current implementation, Ergodic convergence requires nonstrict feasibilit
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence">Linear Convergence</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic Performance</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-stability">ℓ2 Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-gain">ℓ2 Gain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence">Linear convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-performance">Quadratic performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-stability"><span class="math notranslate nohighlight">\(\ell_2\)</span>-stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ell-2-gain"><span class="math notranslate nohighlight">\(\ell_2\)</span>-gain</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passivity">Passivity</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic Sensitivity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for Time-Varying Dynamical Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More Specifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stochastic-sensitivity">Stochastic sensitivity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-for-time-varying-dynamical-systems">Performance for time-varying dynamical systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-specifications">More specifications</a></li>
 </ul>
   </nav></div>
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../../_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>Solve and Validate &#8212; opt-syn</title>
+    <title>Solve and validate &#8212; opt-syn</title>
   
   
   
@@ -198,22 +198,22 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/index_get_started.html">Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how_it_works/index_how_it_works.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/index_get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/system/index_system.html">Build the System</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/bind.html">Repeated Operator Evaluations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/tracking.html">Time-Varying Optimal Solutions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/dynamics.html">Time-Varying Dynamical Systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulate</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/index_problem_formulation.html">Problem Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/specs.html">Performance Specifications</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/index_problem_formulation.html">Problem setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/specs.html">Performance specifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="problem_formulation/config.html">Configuration</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Solve and Validate</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Solve and validate</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -443,7 +443,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Solve and Validate</h1>
+    <h1>Solve and validate</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -453,7 +453,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-solution">Single Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-solution">Single solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bisection">Bisection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternation">Alternation</a></li>
@@ -472,9 +472,9 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="solve-and-validate">
-<h1>Solve and Validate<a class="headerlink" href="#solve-and-validate" title="Link to this heading">#</a></h1>
-<p>The  Analysis and Synthesis problems can be solved once  the appropriate <a class="reference internal" href="../documentation/doc_manager.html"><span class="doc">managers</span></a> are created:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system</span><span class="p">([</span><span class="nb">arguments</span><span class="p">]);</span>
+<h1>Solve and validate<a class="headerlink" href="#solve-and-validate" title="Link to this heading">#</a></h1>
+<p>The  analysis and synthesis problems can be solved once  the appropriate <a class="reference internal" href="../documentation/doc_manager.html"><span class="doc">managers</span></a> are created:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system</span><span class="p">(</span><span class="n">ops</span><span class="p">,</span><span class="w"> </span><span class="n">network</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">);</span>
 <span class="linenos">2</span><span class="n">config</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_config</span><span class="p">();</span>
 <span class="linenos">3</span><span class="n">man_ana</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_analysis</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span><span class="w">  </span>
 <span class="linenos">4</span><span class="n">man_syn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_synthesis</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span><span class="w"> </span>
@@ -487,19 +487,19 @@
 <li><p><a class="reference internal" href="#alternation"><span class="xref myst">Alternation</span></a></p></li>
 </ol>
 <section id="single-solution">
-<span id="id1"></span><h2>Single Solution<a class="headerlink" href="#single-solution" title="Link to this heading">#</a></h2>
-<p>The  <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">solve_single()</span></code> routine performs Analysis or Synthesis at given  specifications. The output of <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">solve_single()</span></code> is a <a class="reference internal" href="../documentation/doc_solutions.html"><span class="doc">solution</span></a> structure <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_solution</span></code>. The fields of the solution structure are explained further  below in <a class="reference internal" href="#validation"><span class="xref myst">Validation</span></a>.</p>
+<span id="id1"></span><h2>Single solution<a class="headerlink" href="#single-solution" title="Link to this heading">#</a></h2>
+<p>The  <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">solve_single()</span></code> routine performs analysis or synthesis at given  specifications. The output of <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">solve_single()</span></code> is a <a class="reference internal" href="../documentation/doc_solutions.html"><span class="doc">solution</span></a> structure <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_solution</span></code>. The fields of the solution structure are explained further  below in <a class="reference internal" href="#validation"><span class="xref myst">Validation</span></a>.</p>
 <section id="analysis">
 <h3>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h3>
-<p>The Analysis single solution routine is</p>
+<p>The analysis single solution routine is</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sol_ana_single</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">man_ana</span><span class="p">.</span><span class="n">solve_single</span><span class="p">(</span><span class="n">order</span><span class="p">,</span><span class="w"> </span><span class="n">specs</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">order</span></code> input is an <span class="math notranslate nohighlight">\(s\)</span>-length cell array. Each entry  of the <code class="docutils literal notranslate"><span class="pre">order</span></code> cell array is one or two  nonnegative integers:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Order Length</p></th>
-<th class="head"><p>Operator Classes</p></th>
+<tr class="row-odd"><th class="head"><p>Order entry length</p></th>
+<th class="head"><p>Operator classes</p></th>
 </tr>
 </thead>
 <tbody>
@@ -512,10 +512,10 @@
 </tbody>
 </table>
 </div>
-<p>The order defines length of the filters in the <a class="reference internal" href="../documentation/doc_iqc.html"><span class="doc">IQCs</span></a>. A higher order requries more computation, but can lead to improved bounds. An example order declaration is</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">op1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_gen</span><span class="p">([</span><span class="nb">arguments</span><span class="p">]);</span>
-<span class="linenos">2</span><span class="n">op2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_sml</span><span class="p">([</span><span class="nb">arguments</span><span class="p">]);</span>
-<span class="linenos">3</span><span class="n">op3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_quad</span><span class="p">([</span><span class="nb">arguments</span><span class="p">]);</span>
+<p>The order defines the length of the filters in the <a class="reference internal" href="../documentation/doc_iqc.html"><span class="doc">IQCs</span></a>. A higher order requries more computation, but can lead to improved bounds. An example order declaration is</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">op1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_gen</span><span class="p">();</span>
+<span class="linenos">2</span><span class="n">op2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_sml</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">);</span>
+<span class="linenos">3</span><span class="n">op3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">op_quad</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">);</span>
 <span class="linenos">4</span><span class="n">order</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]};</span>
 </pre></div>
 </div>
@@ -523,29 +523,29 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">specs</span></code> is a cell array of <a class="reference internal" href="problem_formulation/specs.html"><span class="doc">specifications</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Analysis is performed with respect to a common certificate among all performance specifications in <code class="docutils literal notranslate"><span class="pre">specs</span></code> <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Requiring this common certificate may yield conservatism as compared to doing Analysis separately for each specification in <code class="docutils literal notranslate"><span class="pre">specs</span></code>.</p>
-<p>The common certificate is required if <a class="reference internal" href="#alternation"><span class="xref myst">Alternation</span></a> between Analysis and Synthesis is performed.</p>
+<p>Analysis is performed with respect to a common certificate among all performance specifications in <code class="docutils literal notranslate"><span class="pre">specs</span></code> <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Requiring this common certificate may yield conservatism as compared to doing analysis separately for each specification in <code class="docutils literal notranslate"><span class="pre">specs</span></code>.</p>
+<p>The common certificate is required if <a class="reference internal" href="#alternation"><span class="xref myst">alternation</span></a> between analysis and synthesis is performed.</p>
 </div>
 <p>Synthesis is invoked by</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sol_syn_single</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">man_syn</span><span class="p">.</span><span class="n">solve_single</span><span class="p">(</span><span class="n">iqc_init</span><span class="p">,</span><span class="w"> </span><span class="n">specs</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">iqc_init</span></code> input is an <span class="math notranslate nohighlight">\(s\)</span>-length cell array of <a class="reference internal" href="../documentation/doc_iqc.html"><span class="doc">IQCs</span></a> to warm-start the Synthesis process. A default input of <code class="docutils literal notranslate"><span class="pre">iqc=[]</span></code> will compute valid warm-starts using each <a class="reference internal" href="../documentation/operators/doc_operators.html"><span class="doc">operator class’s</span></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">iqc_init</span></code> input is an <span class="math notranslate nohighlight">\(s\)</span>-length cell array of <a class="reference internal" href="../documentation/doc_iqc.html"><span class="doc">filters</span></a> to warm-start the synthesis process. A default input of <code class="docutils literal notranslate"><span class="pre">iqc=[]</span></code> will compute valid warm-starts using each <a class="reference internal" href="../documentation/operators/doc_operators.html"><span class="doc">operator class’s</span></a>
 <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">create_iqc_identity()</span></code> routine.</p>
-<p>The objective in Analysis or Synthesis is set using the <code class="docutils literal notranslate"><span class="pre">target</span></code> field in the  <a class="reference internal" href="../documentation/doc_specs.html"><span class="doc">operator class’s</span></a>.
-If <code class="docutils literal notranslate"><span class="pre">specs{j}.target</span> <span class="pre">=</span> <span class="pre">true</span></code>, then the specification in <span class="math notranslate nohighlight">\(i\)</span> is minimized. At most one specification <span class="math notranslate nohighlight">\(j\)</span> can have <code class="docutils literal notranslate"><span class="pre">specs{j}.target</span> <span class="pre">=</span> <span class="pre">true</span></code>.
+<p>The objective in analysis or synthesis is set using the <code class="docutils literal notranslate"><span class="pre">target</span></code> field in the  <a class="reference internal" href="../documentation/doc_specs.html"><span class="doc">specifications</span></a>.
+If <code class="docutils literal notranslate"><span class="pre">specs{j}.target</span> <span class="pre">=</span> <span class="pre">true</span></code>, then the specification in <span class="math notranslate nohighlight">\(j\)</span> is minimized. At most one specification <span class="math notranslate nohighlight">\(j\)</span> can have <code class="docutils literal notranslate"><span class="pre">specs{j}.target</span> <span class="pre">=</span> <span class="pre">true</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">specs{j}.target=false</span></code> for all specifications <span class="math notranslate nohighlight">\(j\)</span>, then a feasibility problem is solved.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Different specifications can have different rate <span class="math notranslate nohighlight">\(\rho\)</span> in Synthesis if and only if</p>
+<p>Different specifications can have different rate <span class="math notranslate nohighlight">\(\rho\)</span> in synthesis if and only if</p>
 <ol class="arabic simple">
-<li><p>the order for each <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_gen</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p>the order for each <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_gen</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code>,</p></li>
 <li><p>the order for each <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_sml</span></code>, <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_pcc</span></code>, <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_quad</span></code> is <code class="docutils literal notranslate"><span class="pre">[nonnegative,</span> <span class="pre">0]</span></code>.</p></li>
 </ol>
 <p>If these conditions fail, then all specifications</p>
 <ul class="simple">
 <li><p>must have the same rate <span class="math notranslate nohighlight">\(\rho\)</span> (<code class="docutils literal notranslate"><span class="pre">opt_config.gen.same_rho</span> <span class="pre">=</span> <span class="pre">true</span></code>),</p></li>
-<li><p>must hold only in an infinite-horizon sense (in the current implementation).</p></li>
+<li><p>will only hold in an infinite-horizon sense (in the current implementation).</p></li>
 </ul>
 <p>The <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_manager</span></code> classes will check these conditions, and will override <code class="docutils literal notranslate"><span class="pre">same_rho</span></code> to true if not already set. This issue is due to the presence of noncausal filters in IQC synthesis.</p>
  <!-- See {doc}`<../documentation/doc_iqc>` for more detail about this issue. -->
@@ -553,9 +553,9 @@ If <code class="docutils literal notranslate"><span class="pre">specs{j}.target=
 </section>
 <section id="bisection">
 <span id="id3"></span><h3>Bisection<a class="headerlink" href="#bisection" title="Link to this heading">#</a></h3>
-<p>The routine <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">bisect()</span></code> performs bisection on a single specification. Parameters of bisection are set using the <code class="docutils literal notranslate"><span class="pre">bisect_opts</span></code> <a class="reference internal" href="../documentation/doc_config.html"><span class="doc">configuration</span></a>. The index of the specification in the <code class="docutils literal notranslate"><span class="pre">spec</span></code> to minimize using bisection is set via <code class="docutils literal notranslate"><span class="pre">bisect_opts.spec_ind</span></code>, with a default of index of 1.</p>
+<p>The routine <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">bisect()</span></code> performs bisection on a single specification. Parameters of bisection are set using the <code class="docutils literal notranslate"><span class="pre">bisect_opts</span></code> <a class="reference internal" href="../documentation/doc_config.html"><span class="doc">configuration</span></a>. The index of the specification in the <code class="docutils literal notranslate"><span class="pre">spec</span></code> to minimize using bisection is set via <code class="docutils literal notranslate"><span class="pre">bisect_opts.spec_ind</span></code>, with a default index of 1.</p>
 <p>The outputs of  <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">bisect()</span></code> are the <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_solution</span></code> structure and the two-element array <code class="docutils literal notranslate"><span class="pre">v_range</span></code>. The entries of <code class="docutils literal notranslate"><span class="pre">v_range</span></code> are the lower and upper bounds of the bisected parameter.</p>
-<p>As an example, the Analysis and Synthesis routines for minimizing  the linear convergence rate <span class="math notranslate nohighlight">\(\rho\)</span> subject to a <span class="math notranslate nohighlight">\(\rho\)</span>-weighted  <span class="math notranslate nohighlight">\(\ell_2\)</span> gain bound of 100 is</p>
+<p>As an example, the analysis and synthesis routines for minimizing  the linear convergence rate <span class="math notranslate nohighlight">\(\rho\)</span> subject to a <span class="math notranslate nohighlight">\(\rho\)</span>-weighted  <span class="math notranslate nohighlight">\(\ell_2\)</span> gain bound of 100 is</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">spec_rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_stability</span><span class="p">();</span>
 <span class="linenos">2</span><span class="n">spec_l2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_e2e</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="linenos">3</span><span class="n">specs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="n">spec_rho</span><span class="p">,</span><span class="w"> </span><span class="n">spec_l2</span><span class="p">};</span>
@@ -569,18 +569,18 @@ If <code class="docutils literal notranslate"><span class="pre">specs{j}.target=
 </section>
 <section id="alternation">
 <span id="id4"></span><h3>Alternation<a class="headerlink" href="#alternation" title="Link to this heading">#</a></h3>
-<p>The <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">alternate()</span></code> routine switches between Synthesis and Analysis. It solves a Synthesis problem with fixed IQCs to find a controller, and then solves Analysis with the fixed controller to find IQCs. The Analysis and Synthesis problems may include inner bisection steps.</p>
-<p>An alternation routine with 3 Synthesis/Analysis steps and inner bisection is performed by</p>
+<p>The <code class="xref mat mat-meth docutils literal notranslate"><span class="pre">alternate()</span></code> routine switches between synthesis and analysis. It solves a synthesis problem with fixed IQC filters to find a controller, and then solves analysis with the fixed controller to find IQC filters. The analysis and synthesis problems may include inner bisection steps.</p>
+<p>An alternation routine with 3 synthesis/analysis steps and inner bisection is performed by</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">Niter</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span>
 <span class="linenos">2</span><span class="p">[</span><span class="n">sol_syn_alternate</span><span class="p">,</span><span class="w"> </span><span class="n">v_history</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">man_syn</span><span class="p">.</span><span class="n">alternate</span><span class="p">(</span><span class="n">Niter</span><span class="p">,</span><span class="w"> </span><span class="n">iqc_init</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">,</span><span class="w"> </span><span class="n">specs</span><span class="p">,</span><span class="w"> </span><span class="n">b_opts</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">v_history</span></code> output is a cell array with 2 rows and  Niter columns. Each entry of the cell array stores the  lower and upper parameter bounds from bisection. The top row are the Synthesis bounds, and the bottom row are the Analysis bounds.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">v_history</span></code> output is a cell array with 2 rows and  Niter columns. Each entry of the cell array stores the  lower and upper parameter bounds from bisection. The top row are the synthesis bounds, and the bottom row are the analysis bounds.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>The sequence of parameter bounds in <code class="docutils literal notranslate"><span class="pre">v_history</span></code> ideally forms a monotonically nonincreasing sequence.
-This may not hold true in implementation due to numerical issues in the solutions and controller recovery. Adjustment of the tolerances in the configuration options (e.g. raising the Analysis option <code class="docutils literal notranslate"><span class="pre">config.tol.G_max</span></code>) may encourage monotonic decrease.</p>
-<p>Further development will attempt to encourage monotonicity of decrease in alternation.</p>
+<p>The sequence of upper and lower parameter bounds in <code class="docutils literal notranslate"><span class="pre">v_history</span></code> ideally forms a monotonically nonincreasing and nondecreasing sequence, respectively.
+This may not hold true in implementation due to numerical issues in the solutions and controller recovery. Adjustment of the tolerances in the configuration options (e.g. raising the analysis option <code class="docutils literal notranslate"><span class="pre">config.tol.G_max</span></code>) may encourage monotonicity.</p>
+<p>Further development will attempt to encourage monotonicity in alternation.</p>
 </div>
 </section>
 </section>
@@ -591,7 +591,7 @@ This may not hold true in implementation due to numerical issues in the solution
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Description</p></th>
-<th class="head"><p>Valid Condition</p></th>
+<th class="head"><p>Valid condition</p></th>
 </tr>
 </thead>
 <tbody>
@@ -604,7 +604,7 @@ This may not hold true in implementation due to numerical issues in the solution
 <td><p><code class="docutils literal notranslate"><span class="pre">dia</span></code><span class="math notranslate nohighlight">\(&lt;0\)</span> if strictly feasible, <code class="docutils literal notranslate"><span class="pre">dia</span></code><span class="math notranslate nohighlight">\(=0\)</span> if marginally feasible, <code class="docutils literal notranslate"><span class="pre">dia</span></code> <span class="math notranslate nohighlight">\(&gt; 0\)</span> if infeasible</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gain</span></code></p></td>
-<td><p>Input passivity index and <span class="math notranslate nohighlight">\(H_\infty\)</span> gain</p></td>
+<td><p>Input passivity index and <span class="math notranslate nohighlight">\(H_\infty\)</span>-gain</p></td>
 <td><p>Feasible if <code class="docutils literal notranslate"><span class="pre">gain(1)</span></code> <span class="math notranslate nohighlight">\(&lt; 0\)</span> and <code class="docutils literal notranslate"><span class="pre">gain(2)</span></code> <span class="math notranslate nohighlight">\(&lt; 1\)</span> (for <code class="xref mat mat-class docutils literal notranslate"><span class="pre">spec_stability</span></code>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rho</span></code></p></td>
@@ -618,7 +618,7 @@ This may not hold true in implementation due to numerical issues in the solution
 </tbody>
 </table>
 </div>
-<p>If the algorithm has a block-lower-triangular information structure, and  Analysis or Synthesis is successful at some <span class="math notranslate nohighlight">\(\rho &gt; 0\)</span>, then the algorithm is also well-posed.</p>
+<p>If the algorithm has a block lower triangular information structure, and  analysis or synthesis is successful at some <span class="math notranslate nohighlight">\(\rho &gt; 0\)</span>, then the algorithm is also well-posed.</p>
 <p>Other attributes of <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_solution</span></code> include</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -628,16 +628,16 @@ This may not hold true in implementation due to numerical issues in the solution
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vars</span></code></p></td>
-<td><p>Design variables in the Analysis/Synthesis problem</p></td>
+<td><p>Design variables in the analysis/synthesis problem</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></td>
 <td><p>System that solves the inclusion problem</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lmi_out</span></code></p></td>
-<td><p>Solution information from the numerical solver (LMILAB)</p></td>
+<td><p>Solution information from the numerical solver (LMI Lab)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cert</span></code></p></td>
-<td><p>Analysis-and-Synthesis-specific certificates</p></td>
+<td><p>Certificates for analysis and synthesis</p></td>
 </tr>
 </tbody>
 </table>
@@ -699,7 +699,7 @@ This may not hold true in implementation due to numerical issues in the solution
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-solution">Single Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-solution">Single solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bisection">Bisection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternation">Alternation</a></li>
