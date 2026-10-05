@@ -49,8 +49,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Build the System" href="problem_formulation/system/index_system.html" />
-    <link rel="prev" title="How it Works" href="../how_it_works/index_how_it_works.html" />
+    <link rel="next" title="Build the system" href="problem_formulation/system/index_system.html" />
+    <link rel="prev" title="How it works" href="../how_it_works/index_how_it_works.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -202,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="simulation.html">Simulate</a></li>
@@ -483,12 +483,12 @@
 <h2>Tasks<a class="headerlink" href="#tasks" title="Link to this heading">#</a></h2>
 <p>The three main tasks of <span style="color:#5D93BF">opt</span>-syn are simulation, analysis, and synthesis.</p>
 <p>Simulation solves an inclusion algorithm <span class="math notranslate nohighlight">\(0 \in \sum_{i=1}^{s} F_i(\beta^*)\)</span> by iteratively executing an algorithm. Analysis certifies worst-case performance specifications of the algorithm for any <span class="math notranslate nohighlight">\(F_i\)</span> in given classes of operators. Synthesis creates a controller such that the overall algorithm obeys the desired performance specifications.</p>
-<p>All three tasks model the algorithm as a System (<code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_system</span></code>). The System has three main parts: the operators, the network, and the controller.</p>
+<p>All three tasks model the algorithm as a system (<code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_system</span></code>). The system has three main parts: the operators, the network, and the controller.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system</span><span class="p">(</span><span class="n">Operators</span><span class="p">,</span><span class="w"> </span><span class="n">Network</span><span class="p">,</span><span class="w"> </span><span class="n">Controller</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The operators are specified as an <span class="math notranslate nohighlight">\(s\)</span>-length cell array. These are specific operators <span class="math notranslate nohighlight">\(F_i\)</span> in simulation (<code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_sim</span></code>), or are operator classes in analysis/synthesis (e.g. <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_gen</span></code> for set-valued maps, <code class="xref mat mat-class docutils literal notranslate"><span class="pre">op_quad</span></code> for quadratics).</p>
-<p>The network and controller are both state-space dynamical systems. These are  represented through a Generalized Plant construction as <code class="xref mat mat-class docutils literal notranslate"><span class="pre">genplant</span></code> objects.</p>
+<p>The network and controller are both state-space dynamical systems. These are  represented through a generalized plant construction as <code class="xref mat mat-class docutils literal notranslate"><span class="pre">genplant</span></code> objects.</p>
 </section>
 <section id="simulation">
 <h2>Simulation<a class="headerlink" href="#simulation" title="Link to this heading">#</a></h2>
@@ -538,7 +538,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How it Works</p>
+        <p class="prev-next-title">How it works</p>
       </div>
     </a>
     <a class="right-next"
@@ -546,7 +546,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Build the System</p>
+        <p class="prev-next-title">Build the system</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

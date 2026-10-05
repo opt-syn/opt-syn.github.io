@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../../_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>How it Works &#8212; opt-syn</title>
+    <title>How it works &#8212; opt-syn</title>
   
   
   
@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Usage" href="../usage/index_usage.html" />
-    <link rel="prev" title="Get Started" href="../get_started/index_get_started.html" />
+    <link rel="prev" title="Get started" href="../get_started/index_get_started.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -202,9 +202,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How it works</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../usage/index_usage.html">Usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../usage/problem_formulation/system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/problem_formulation/system/dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../usage/simulation.html">Simulate</a></li>
@@ -443,7 +443,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How it Works</h1>
+    <h1>How it works</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -453,15 +453,15 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization Algorithms</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence Properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking Convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of Regulator Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of regulator equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#networked-setting">Networked Setting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#networked-setting">Networked setting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">Extensions</a></li>
 </ul>
             </nav>
@@ -475,7 +475,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-it-works">
-<h1>How it Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h1>
+<h1>How it works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h1>
 <p><span style="color:#5D93BF">opt</span>-syn analyzes and synthesizes optimization algorithms using concepts from robust control. This page summarizes optimization/inclusion problems, convergence conditions, and the mathematical certificates provided by <span style="color:#5D93BF">opt</span>-syn.</p>
 <p>A composite optimization problem tries to find a point <span class="math notranslate nohighlight">\(\beta^*\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
@@ -487,7 +487,7 @@
 \end{align*}\]</div>
 <p>Zero-inclusion problems include solution concepts such as variational inequalities and constrained optimization problems. As an example, the zero inclusion problem <span class="math notranslate nohighlight">\(0 \in \sum_{i=1}^s \partial f_i(\beta^*) \)</span> is a necessary optimality principle for the composite optimization problem.</p>
 <section id="optimization-algorithms">
-<h2>Optimization Algorithms<a class="headerlink" href="#optimization-algorithms" title="Link to this heading">#</a></h2>
+<h2>Optimization algorithms<a class="headerlink" href="#optimization-algorithms" title="Link to this heading">#</a></h2>
 <p>An optimization algorithm is a procedure that generates a sequence of iterates <span class="math notranslate nohighlight">\((w_k, z_k)_{k \in \N}\)</span> satisfying <span class="math notranslate nohighlight">\(w^i_k \in F_i(z^i_k)\)</span>.</p>
 <p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems <a class="footnote-reference brackets" href="#footcite-wang2011control" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
@@ -502,14 +502,14 @@
 \end{align*}\end{split}\]</div>
 <p>Figure <a class="reference internal" href="#fig-dr"><span class="xref myst">1</span></a> visualizes  executions of the Douglas-Rachford algorithm to solve the optimization problem <span class="math notranslate nohighlight">\(\min f(\beta) + \norm{\beta}_1\)</span> for a quadratic <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <figure class="align-default" id="fig-dr">
-<img alt="Multiple trajectories of the Douglas-Rachford Algorithm" src="../../_images/dr_trace.webp" />
+<img alt="Multiple trajectories of the Douglas-Rachford algorithm" src="../../_images/dr_trace.webp" />
 <figcaption>
 <p><span class="caption-text"><em>Figure 1:</em> The optimal solution is the black circle. The visualized curves are the outputs <span class="math notranslate nohighlight">\(\{z_k^2\}_{k \in \N}\)</span> starting from random initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>.</span><a class="headerlink" href="#fig-dr" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="convergence-properties">
-<h2>Convergence Properties<a class="headerlink" href="#convergence-properties" title="Link to this heading">#</a></h2>
+<h2>Convergence properties<a class="headerlink" href="#convergence-properties" title="Link to this heading">#</a></h2>
 <p>The algorithm is well-posed if the trajectory <span class="math notranslate nohighlight">\((x_k, w_k, z_k)_{k \in \N}\)</span> is unique for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
 <p>A fixed-point of the algorithm is a tuple <span class="math notranslate nohighlight">\((x^*, w^*, z^*)\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
@@ -518,22 +518,22 @@
 \end{align*}\]</div>
 <p>The algorithm is convergent if for every initial condition <span class="math notranslate nohighlight">\(x_0\)</span>, there exists a fixed point <span class="math notranslate nohighlight">\((x^*(x_0), w^*(x_0), z^*(x_0))\)</span> such that</p>
 <ol class="arabic simple">
-<li><p>Optimality: <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i}(x_0) = 0\)</span></p></li>
-<li><p>Consensus:  <span class="math notranslate nohighlight">\(z^{*1}(x_0) = z^{*2}(x_0) = \ldots = z^{*s}(x_0)\)</span></p></li>
-<li><p>Attractivity:  <span class="math notranslate nohighlight">\(\lim_{k\rightarrow \infty} \mav{c}{x_k - x^*(x_0) \\ w_k - w^*(x_0) \\ z_k - z^*(x_0)}_2 = 0\)</span>.</p></li>
+<li><p>Optimality: <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i}(x_0) = 0\)</span>,</p></li>
+<li><p>Consensus:  <span class="math notranslate nohighlight">\(z^{*1}(x_0) = z^{*2}(x_0) = \ldots = z^{*s}(x_0)\)</span>,</p></li>
+<li><p>Attractivity:  <span class="math notranslate nohighlight">\(\lim_{k\rightarrow \infty} \mav{c}{x_k - x^*(x_0) \\ w_k - w^*(x_0) \\ z_k - z^*(x_0)}_2 = 0\)</span>,</p></li>
 </ol>
-<p>It is linearly convergent  with rate <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span> if there exists a constant <span class="math notranslate nohighlight">\(\gamma_0&gt; 0\)</span> with</p>
+<p>hold. It is linearly convergent  with rate <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span> if there exists a constant <span class="math notranslate nohighlight">\(\gamma_0&gt; 0\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
  \mav{c}{x_k - x^*(x_0) \\ w_k - w^*(x_0) \\ z_k - z^*(x_0)}_2  \leq \gamma_0 \rho^{k} \norm{x_0 - x^*(x_0)}_2 &amp; &amp; \forall k \in \N, \ x_0.
 \end{align*}\end{split}\]</div>
 </section>
 <section id="checking-convergence">
-<h2>Checking Convergence<a class="headerlink" href="#checking-convergence" title="Link to this heading">#</a></h2>
-<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: Robust Stability and the Solvability of Regulator Equations. This theory holds for inclusion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> <a class="footnote-reference brackets" href="#footcite-miller2026structure" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
-<p>Robust Stability ensures convergence to 0 if 0 is the solution to the inclusion problem (<span class="math notranslate nohighlight">\(0 \in F_i(0)\)</span> holds for all operators <span class="math notranslate nohighlight">\(F_i\)</span>). Solvability of the Regulator Equations ensures that a nonzero solution to the inclusion problem can be shifted into a zero solution of a zero-centered problem (error coordinates).</p>
+<h2>Checking convergence<a class="headerlink" href="#checking-convergence" title="Link to this heading">#</a></h2>
+<p><span style="color:#5D93BF">opt</span>-syn certifies linear convergence of well-posed algorithms by checking two conditions: robust stability and the solvability of regulator equations. This theory holds for inclusion problems with unique fixed-point pairs <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> <a class="footnote-reference brackets" href="#footcite-miller2026structure" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<p>Robust stability ensures convergence to 0 if 0 is the solution to the inclusion problem (<span class="math notranslate nohighlight">\(0 \in F_i(0)\)</span> holds for all operators <span class="math notranslate nohighlight">\(F_i\)</span>). Solvability of the regulator equations ensures that a nonzero solution to the inclusion problem can be shifted into a zero solution of a zero-centered problem (error coordinates).</p>
 <section id="condition-1-robust-stability">
-<h3>Condition 1: Robust Stability<a class="headerlink" href="#condition-1-robust-stability" title="Link to this heading">#</a></h3>
+<h3>Condition 1: Robust stability<a class="headerlink" href="#condition-1-robust-stability" title="Link to this heading">#</a></h3>
 <p>Assume that the algorithm is well-posed, and the operator inclusion problem <span class="math notranslate nohighlight">\(0\in \sum_{i=1}^s F_i(\beta^*)\)</span> is uniquely solved by the pair <span class="math notranslate nohighlight">\((\beta^*, w^*) = (0, 0)\)</span>  Then for all initial conditions <span class="math notranslate nohighlight">\(x_0\)</span>, the subsequent trajectories of</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
@@ -542,7 +542,7 @@
 <p>satisfy <span class="math notranslate nohighlight">\(\lim_{k \rightarrow \infty} \rho^{-k} x_k = 0\)</span>.</p>
 </section>
 <section id="condition-2-solvability-of-regulator-equations">
-<h3>Condition 2: Solvability of Regulator Equations<a class="headerlink" href="#condition-2-solvability-of-regulator-equations" title="Link to this heading">#</a></h3>
+<h3>Condition 2: Solvability of regulator equations<a class="headerlink" href="#condition-2-solvability-of-regulator-equations" title="Link to this heading">#</a></h3>
 <p>For any pair <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i} = 0\)</span>, there exists a state <span class="math notranslate nohighlight">\(x^*\)</span> satisfying</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -552,14 +552,14 @@
 </section>
 <section id="implications">
 <h3>Implications<a class="headerlink" href="#implications" title="Link to this heading">#</a></h3>
-<p>The Robust Stability criterion is an intensive dynamical test, and will be verified using Integral Quadratic Constraints and Linear Matrix Inequality methods <a class="footnote-reference brackets" href="#footcite-megretski2002system" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. In contrast, the  Regulator Equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> is provided by detectability of <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span>.</p>
-<p>The Regulator Equation requirement is independent of the specific operators in <span class="math notranslate nohighlight">\(F\)</span>. Robust Stability is verified for classes of operators (e.g. <span class="math notranslate nohighlight">\(F_2\)</span> is maximal monotone).</p>
-<p>Fullfillment of the Regulator Equation and the <span style="color:#5D93BF">opt</span>-syn-verified Robust Stability requrirements imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
+<p>The robust stability criterion is an intensive dynamical test, and will be verified using integral quadratic constraints and linear matrix inequality methods <a class="footnote-reference brackets" href="#footcite-megretski2002system" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. In contrast, the  regulator equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> follows if <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span> is detectable.</p>
+<p>The regulator equation requirement is independent of the specific operators in <span class="math notranslate nohighlight">\(F\)</span>. Robust stability is verified for classes of operators (e.g. <span class="math notranslate nohighlight">\(F_2\)</span> is maximal monotone).</p>
+<p>Fullfillment of the regulator equation and the <span style="color:#5D93BF">opt</span>-syn-verified robust stability condition imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
 </section>
 </section>
 <section id="networked-setting">
-<h2>Networked Setting<a class="headerlink" href="#networked-setting" title="Link to this heading">#</a></h2>
-<p>Synthesis is posed in terms of a Network separating the oracle <span class="math notranslate nohighlight">\(F\)</span> to the controller (you). These networks can model time-delays, cross-talk, channel memory, and other phenomena. The default case of no network dynamics (direct connection to the oracle <span class="math notranslate nohighlight">\(F\)</span>) is</p>
+<h2>Networked setting<a class="headerlink" href="#networked-setting" title="Link to this heading">#</a></h2>
+<p>Synthesis is posed in terms of a network separating the oracle <span class="math notranslate nohighlight">\(F\)</span> to the controller (you). These networks can model time-delays, cross-talk, channel memory, and other phenomena. The default case of no network dynamics (direct connection to the oracle <span class="math notranslate nohighlight">\(F\)</span>) is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mat{c}{
         z_k \\ y_k
@@ -567,8 +567,8 @@
         w_k \\ u_k
     }.\end{split}\]</div>
 <p>A more general network can be modeled as a linear system. The interconnection between the network and a controller forms the algorithm that interfaces the operator <span class="math notranslate nohighlight">\(F\)</span>.</p>
-<p>The Regulator Equation condition in the networked setting can be expanded into</p>
-<p><em>Regulator Equation</em>:  For any <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i} = 0\)</span>, there exists a</p>
+<p>The regulator equation condition in the networked setting can be expanded into</p>
+<p><em>Regulator equation</em>:  For any <span class="math notranslate nohighlight">\((\beta^*, w^*)\)</span> with <span class="math notranslate nohighlight">\(\sum_{i=1}^s w^{*,i} = 0\)</span>, there exists a</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}    
      \text{Network}: &amp; &amp;    \mat{c|cc:c}{A &amp; 0 &amp; B_w &amp; B_y \hl
@@ -578,20 +578,20 @@
 \mat{c}{\Theta\\\Phi}  &amp;= \mat{c}{\Theta \\ \Gamma}. \label{eq:nominal_regulation_control_sys_control}    
 \end{align}\end{split}\]</div>
 <p>If there does not exist a <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> triple satisfying the top equation, then a convergent optimization algorithm cannot be found.</p>
-<p>Under the Convergence and Regulator Equation conditions, convergence in all signals is achieved as</p>
+<p>Under the convergence and regulator equation conditions, convergence in all signals is achieved as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
     \lim_{k \rightarrow \infty}
     \mat{c}{x_k^N \\ x^c_k \hl  y_k \\u_k} &amp; = \mat{c}{\Pi \\ \Theta \hl \Phi \\ \Gamma} \mat{c}{-\beta^* \\{w}^{*,1} \\ w^{*,2} \\ \vdots \\ w^{*, s-1}}, &amp;   \lim_{k \rightarrow \infty}
     z_k &amp; =  z^* = \mat{c}{\1 \otimes \beta^*}.     
 \end{align}\end{split}\]</div>
-<p>Controllers are formed by the interconnection of an internal model <a class="footnote-reference brackets" href="#footcite-francis1976internal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and a designed subcontroller. The internal model is based on the solutions <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> of the regulator equations, and ensures that the Regulator Equation requirement is satisfied for <em>any</em> subcontroller.</p>
-<p>The subcontroller must then ensure that the overall procedure is well-posed and  obeys  Robust Stability condition. Solving for the subcontroller can be accomplished through  IQC synthesis methods <a class="footnote-reference brackets" href="#footcite-veenman2011iqc" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.
+<p>Controllers are formed by the interconnection of an internal model <a class="footnote-reference brackets" href="#footcite-francis1976internal" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and a designed subcontroller. The internal model is based on the solutions <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> of the regulator equations, and ensures that the regulator equation condition is satisfied for <em>any</em> subcontroller.</p>
+<p>The subcontroller must then ensure that the overall procedure is well-posed and  obeys  robust stability condition. Solving for the subcontroller can be accomplished through  IQC synthesis methods <a class="footnote-reference brackets" href="#footcite-veenman2011iqc" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.
 Synthesis may also involve selecting a solution <span class="math notranslate nohighlight">\((\Pi, \Gamma, \Phi)\)</span> to the regulator equations <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="extensions">
 <h2>Extensions<a class="headerlink" href="#extensions" title="Link to this heading">#</a></h2>
-<p>The overview is limited to static optimization problems with time-independent memory/stepsize rules. The <a class="reference internal" href="../usage/problem_formulation/index_problem_formulation.html"><span class="doc">Problem Formulation</span></a> section in <a class="reference internal" href="../usage/index_usage.html"><span class="doc">Usage</span></a> documents generalizations to this base construction, including</p>
+<p>The overview is limited to static optimization problems with time-independent memory/stepsize rules. The <a class="reference internal" href="../usage/problem_formulation/index_problem_formulation.html"><span class="doc">Problem formulation</span></a> section in <a class="reference internal" href="../usage/index_usage.html"><span class="doc">Usage</span></a> documents generalizations to this base construction, including</p>
 <ul class="simple">
 <li><p>Performance criteria</p></li>
 <li><p>Time-varying optimization problems</p></li>
@@ -658,7 +658,7 @@ Synthesis may also involve selecting a solution <span class="math notranslate no
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Get Started</p>
+        <p class="prev-next-title">Get started</p>
       </div>
     </a>
     <a class="right-next"
@@ -688,15 +688,15 @@ Synthesis may also involve selecting a solution <span class="math notranslate no
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization Algorithms</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence Properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking Convergence</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust Stability</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of Regulator Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimization-algorithms">Optimization algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-properties">Convergence properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-convergence">Checking convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-1-robust-stability">Condition 1: Robust stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-2-solvability-of-regulator-equations">Condition 2: Solvability of regulator equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#networked-setting">Networked Setting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#networked-setting">Networked setting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">Extensions</a></li>
 </ul>
   </nav></div>

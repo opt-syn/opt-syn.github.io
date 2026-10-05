@@ -202,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="system/bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="system/tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="system/dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation.html">Simulate</a></li>
@@ -501,7 +501,7 @@
 </div>
 <p>Most specifications have an additional field <code class="docutils literal notranslate"><span class="pre">rho</span></code> discount rate <span class="math notranslate nohighlight">\(\rho &gt;0\)</span> as an argument.
 Choosing <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span> imposes that the property holds at an exponential rate.</p>
-<p>Refer to the  <a class="reference internal" href="../../documentation/doc_specs.html"><span class="doc">Performance Specification Documentation</span></a> for information about the specifications and their interfaces.</p>
+<p>Refer to the  <a class="reference internal" href="../../documentation/doc_specs.html"><span class="doc">Performance specification documentation</span></a> for information about the specifications and their interfaces.</p>
 <section id="linear-convergence">
 <h2>Linear convergence<a class="headerlink" href="#linear-convergence" title="Link to this heading">#</a></h2>
 <p>This imposes exponential stability of the iterates at rate <span class="math notranslate nohighlight">\(\rho\)</span>. For every
@@ -552,7 +552,7 @@ initial condition <span class="math notranslate nohighlight">\(x_0\)</span> ther
 <span class="linenos">2</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_quad</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The Synthesis procedure requires that <span class="math notranslate nohighlight">\(Q = Q^\top\)</span> and <span class="math notranslate nohighlight">\(R \succ 0\)</span>.</p>
+<p>The synthesis procedure requires that <span class="math notranslate nohighlight">\(Q = Q^\top\)</span> and <span class="math notranslate nohighlight">\(R \succ 0\)</span>.</p>
 <p>The following specifications are all specific instances of quadratic performance.</p>
 <section id="ell-2-stability">
 <h3><span class="math notranslate nohighlight">\(\ell_2\)</span>-stability<a class="headerlink" href="#ell-2-stability" title="Link to this heading">#</a></h3>
@@ -617,7 +617,7 @@ input passivity index <span class="math notranslate nohighlight">\(\nu_w\)</span
   \; \geq \;
   \sum_{k=0}^{T} \big( \nu_w \norm{w_{p,k}}_2^2 + \nu_z \norm{z_{p,k}}_2^2 \big).
 \end{align*}\]</div>
-<p>Setting both indices to zero corresponds to classical passivity. Positive indices correspond to the stronger input- or output-strict passivity property, respectively. The performance input and output channels must have the same length.</p>
+<p>Setting both indices to zero corresponds to classical passivity. Positive indices correspond to the stronger input or output strict passivity property, respectively. The performance input and output channels must have the same length.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">% ind_w = nu_w, ind_z = nu_z</span>
 <span class="linenos">2</span><span class="n">perf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spec_passivity</span><span class="p">(</span><span class="n">ind_w</span><span class="p">,</span><span class="w"> </span><span class="n">ind_z</span><span class="p">,</span><span class="w"> </span><span class="n">iwp</span><span class="p">,</span><span class="w"> </span><span class="n">izp</span><span class="p">);</span><span class="w">   </span>
 </pre></div>

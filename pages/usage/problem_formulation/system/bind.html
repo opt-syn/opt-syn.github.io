@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../../../../_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>Repeated Operator Evaluations &#8212; opt-syn</title>
+    <title>Repeated operator evaluations &#8212; opt-syn</title>
   
   
   
@@ -49,8 +49,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Time-Varying Optimal Solutions" href="tracking.html" />
-    <link rel="prev" title="Build the System" href="index_system.html" />
+    <link rel="next" title="Time-varying optimal solutions" href="tracking.html" />
+    <link rel="prev" title="Build the system" href="index_system.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -198,9 +198,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index_system.html">Build the system</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../simulation.html">Simulate</a></li>
@@ -437,7 +437,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Repeated Operator Evaluations</h1>
+    <h1>Repeated operator evaluations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -452,7 +452,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="repeated-operator-evaluations">
-<h1>Repeated Operator Evaluations<a class="headerlink" href="#repeated-operator-evaluations" title="Link to this heading">#</a></h1>
+<h1>Repeated operator evaluations<a class="headerlink" href="#repeated-operator-evaluations" title="Link to this heading">#</a></h1>
 <p>Some optimization algorithms involve multiple evaluations of operators within a single time step. The Extragradient Method <a class="footnote-reference brackets" href="#footcite-korpelevich1976extragradient" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[x_{k+1} = x_{k} - \gamma \nabla f(x_k - \gamma \nabla f(x_k)),\]</div>
@@ -471,7 +471,7 @@ I &amp; -\lambda I &amp; 0 &amp; 0 &amp; 0 \\
 I &amp; -2\lambda I &amp; 0 &amp; 0 &amp; 0 \\
 I &amp; -2 \lambda I &amp; -\lambda I &amp; - \lambda I &amp; 0} \mat{c}{x_k \hl w^1_k \\ w^2_k \\ w^3_k \\ w^4_k}, &amp; \mat{c}{w^1_k \\ w^2_k \\ w^3_k \\ w^4_k} &amp;= \mat{c}{F_1 (z^1_k) \\ F_2 (z^2_k)\\ F_3 (z^3_k) \\ F_2(z^4_k)}\end{split}\]</div>
 <p>evaluates the operator <span class="math notranslate nohighlight">\(F_2\)</span> twice per time step: at positions 2 and 4. This algorithm may be modeled using the code</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">Operator_Class</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="n">op1</span><span class="p">,</span><span class="w"> </span><span class="n">op2</span><span class="p">,</span><span class="w"> </span><span class="n">op3</span><span class="p">};</span><span class="w"> </span><span class="c">%classes for F1, F2, F3</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">operator_class</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="n">op1</span><span class="p">,</span><span class="w"> </span><span class="n">op2</span><span class="p">,</span><span class="w"> </span><span class="n">op3</span><span class="p">};</span><span class="w"> </span><span class="c">%classes for F1, F2, F3</span>
 <span class="linenos"> 2</span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 <span class="linenos"> 3</span><span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">lambda</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">gamma</span><span class="p">);</span>
 <span class="linenos"> 4</span><span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
@@ -484,13 +484,13 @@ I &amp; -2 \lambda I &amp; -\lambda I &amp; - \lambda I &amp; 0} \mat{c}{x_k \hl
 <span class="linenos">11</span>
 <span class="linenos">12</span><span class="n">bind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c">%ordering of operators in repeated evaluations</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="n">sys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system</span><span class="p">(</span><span class="n">Operator_Class</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">K</span><span class="p">);</span>
+<span class="linenos">14</span><span class="n">sys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">K</span><span class="p">);</span>
 <span class="linenos">15</span><span class="n">sys</span><span class="p">.</span><span class="n">bind</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bind</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>The <a class="reference internal" href="../../../examples_simulation/sim_bind.html"><span class="doc">Repeated Evaluations</span></a> example executes this algorithm with provided code.</p>
+<p>The <a class="reference internal" href="../../../examples_simulation/sim_bind.html"><span class="doc">Repeated evaluations</span></a> example executes this algorithm with provided code.</p>
 </div>
 </section>
 <hr class="footnotes docutils" />
@@ -522,7 +522,7 @@ I &amp; -2 \lambda I &amp; -\lambda I &amp; - \lambda I &amp; 0} \mat{c}{x_k \hl
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Build the System</p>
+        <p class="prev-next-title">Build the system</p>
       </div>
     </a>
     <a class="right-next"
@@ -530,7 +530,7 @@ I &amp; -2 \lambda I &amp; -\lambda I &amp; - \lambda I &amp; 0} \mat{c}{x_k \hl
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Time-Varying Optimal Solutions</p>
+        <p class="prev-next-title">Time-varying optimal solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

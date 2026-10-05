@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Problem setup" href="problem_formulation/index_problem_formulation.html" />
-    <link rel="prev" title="Time-Varying Dynamical Systems" href="problem_formulation/system/dynamics.html" />
+    <link rel="prev" title="Time-varying dynamical systems" href="problem_formulation/system/dynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -202,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="problem_formulation/system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="problem_formulation/system/dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Simulate</a></li>
@@ -455,7 +455,7 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execution">Execution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-execution">Details of  Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-execution">Details of  execution</a></li>
 </ul>
             </nav>
         </div>
@@ -473,8 +473,8 @@
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../documentation/doc_simulation.html"><span class="doc">Simulation Documentation</span></a> for more details about all objects and routines.</p></li>
-<li><p><a class="reference internal" href="../examples_simulation/index_example_simulation.html"><span class="doc">Simulation Examples</span></a> for demonstrations.</p></li>
+<li><p><a class="reference internal" href="../documentation/doc_simulation.html"><span class="doc">Simulation documentation</span></a> for more details about all objects and routines.</p></li>
+<li><p><a class="reference internal" href="../examples_simulation/index_example_simulation.html"><span class="doc">Simulation examples</span></a> for demonstrations.</p></li>
 </ul>
 </div>
 <section id="execution">
@@ -494,7 +494,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">x0</span></code></p></td>
-<td><p>Initial Condition</p></td>
+<td><p>Initial condition</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">wp</span></code></p></td>
 <td><p>Performance Input</p></td>
@@ -612,8 +612,8 @@ A plot of the signals (<span class="math notranslate nohighlight">\(w\)</span>, 
 </div>
 </section>
 <section id="details-of-execution">
-<h2>Details of  Execution<a class="headerlink" href="#details-of-execution" title="Link to this heading">#</a></h2>
-<p>The System <code class="docutils literal notranslate"><span class="pre">sys</span></code> is built  by first interconnecting the Network and Controller, and then interconnecting the possibly nonlinear operator <span class="math notranslate nohighlight">\(F\)</span>. This is mathematically described by</p>
+<h2>Details of  execution<a class="headerlink" href="#details-of-execution" title="Link to this heading">#</a></h2>
+<p>The System <code class="docutils literal notranslate"><span class="pre">sys</span></code> is built  by first interconnecting the network and controller, and then interconnecting the possibly nonlinear operator <span class="math notranslate nohighlight">\(F\)</span>. This is mathematically described by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 \text{Operator}: &amp; &amp; w_k &amp; \in F(z_k), \\
@@ -647,7 +647,7 @@ z_{p, k+1} &amp;= \Ccl_{z_p} x_k + \textstyle \sum_{i=1}^s \Dcl_{z_p w i} w^i_k 
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Evaluation</p></th>
-<th class="head"><p>Used Method</p></th>
+<th class="head"><p>Used method</p></th>
 <th class="head"><p>Condition</p></th>
 <th class="head"><p>Operation <span class="math notranslate nohighlight">\(z_i \mapsto H_i z_i\)</span></p></th>
 </tr>
@@ -687,7 +687,7 @@ z_{p, k+1} &amp;= \Ccl_{z_p} x_k + \textstyle \sum_{i=1}^s \Dcl_{z_p w i} w^i_k 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Time-Varying Dynamical Systems</p>
+        <p class="prev-next-title">Time-varying dynamical systems</p>
       </div>
     </a>
     <a class="right-next"
@@ -719,7 +719,7 @@ z_{p, k+1} &amp;= \Ccl_{z_p} x_k + \textstyle \sum_{i=1}^s \Dcl_{z_p w i} w^i_k 
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#execution">Execution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-execution">Details of  Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-execution">Details of  execution</a></li>
 </ul>
   </nav></div>
 

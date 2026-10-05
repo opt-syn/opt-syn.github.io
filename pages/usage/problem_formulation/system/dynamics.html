@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../../../../_static/favicon/sun_part_16.svg" rel="icon" type="image/svg+xml">
-    <title>Time-Varying Dynamical Systems &#8212; opt-syn</title>
+    <title>Time-varying dynamical systems &#8212; opt-syn</title>
   
   
   
@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Simulation" href="../../simulation.html" />
-    <link rel="prev" title="Time-Varying Optimal Solutions" href="tracking.html" />
+    <link rel="prev" title="Time-varying optimal solutions" href="tracking.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -202,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index_system.html">Build the system</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../simulation.html">Simulate</a></li>
@@ -443,7 +443,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Time-Varying Dynamical Systems</h1>
+    <h1>Time-varying dynamical systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -454,7 +454,7 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic">Periodic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-orbit">Periodic-Orbit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-orbit">Periodic-orbit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switched">Switched</a></li>
 </ul>
             </nav>
@@ -468,12 +468,12 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="time-varying-dynamical-systems">
-<h1>Time-Varying Dynamical Systems<a class="headerlink" href="#time-varying-dynamical-systems" title="Link to this heading">#</a></h1>
-<p>A trajectory <span class="math notranslate nohighlight">\((x, w, z)\)</span> of a Linear Time-Varying (LTV) dynamical system with matrix representation <span class="math notranslate nohighlight">\((\Acl_k, \Bcl_k, \Ccl_k, \Dcl_k)_{k \in \N}\)</span> obeys the relation</p>
+<h1>Time-varying dynamical systems<a class="headerlink" href="#time-varying-dynamical-systems" title="Link to this heading">#</a></h1>
+<p>A trajectory <span class="math notranslate nohighlight">\((x, w, z)\)</span> of a linear time-varying (LTV) dynamical system with matrix representation <span class="math notranslate nohighlight">\((\Acl_k, \Bcl_k, \Ccl_k, \Dcl_k)_{k \in \N}\)</span> obeys the relation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mat{c}{x_{k+1} \\ z_k} = \mat{c|c}{\Acl_k &amp; \Bcl_k \hl \Ccl_k &amp; \Dcl_k } \mat{c}{x_k \\ w_k}, &amp; &amp; \forall k \in \N.\end{split}\]</div>
-<p>Linear Time Invariant (LTI) systems are a special case of LTV systems where <span class="math notranslate nohighlight">\((\Acl, \Bcl, \Ccl, \Dcl)\)</span> are constant in time.
-The <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_system</span></code> class in the <a class="reference internal" href="index_system.html"><span class="doc">System</span></a> page involves networks and controllers that are only  Linear Time Invariant (LTI).</p>
+<p>Linear time-invariant (LTI) systems are a special case of LTV systems where <span class="math notranslate nohighlight">\((\Acl, \Bcl, \Ccl, \Dcl)\)</span> are constant in time.
+The <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_system</span></code> class in the <a class="reference internal" href="index_system.html"><span class="doc">System</span></a> page involves networks and controllers that are only  linear time-invariant (LTI).</p>
 <p>This page documents time-varying dynamical systems that are supported by <span style="color:#5D93BF">opt</span>-syn.</p>
 <p>In all types of dynamical systems listed on this page,  one of the network or controller can be LTI. If both the network and controller are LTI, then <code class="xref mat mat-class docutils literal notranslate"><span class="pre">opt_system</span></code> should be used instead of the broader time-varying system class.</p>
 <section id="periodic">
@@ -484,7 +484,7 @@ The <code class="xref mat mat-class docutils literal notranslate"><span class="p
  \mat{c|c}{\Acl_k &amp; \Bcl_k \hl \Ccl_k &amp; \Dcl_k }  = \mat{c|c}{\Acl_{k+h} &amp; \Bcl_{k+h} \hl \Ccl_{k+h} &amp; \Dcl_{k+h} } &amp; &amp; \forall k \in \N.
  \end{align*}\]</div>
 <p>Systems with periodic networks and controllers can be specified using the command</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys_per</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system_periodic</span><span class="p">(</span><span class="n">Operator_Class</span><span class="p">,</span><span class="w"> </span><span class="n">Network</span><span class="p">,</span><span class="w"> </span><span class="n">Controller</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys_per</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system_periodic</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span><span class="w"> </span><span class="n">network</span><span class="p">,</span><span class="w"> </span><span class="n">controller</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>An <span class="math notranslate nohighlight">\(h\)</span>-periodic network is stored as an <span class="math notranslate nohighlight">\(h\)</span>-length cell of <code class="xref mat mat-class docutils literal notranslate"><span class="pre">genplant</span></code> objects, or as a <code class="xref mat mat-class docutils literal notranslate"><span class="pre">genplant_poly</span></code> object.</p>
@@ -496,16 +496,16 @@ If the network is LTI, then the controller can be an <span class="math notransla
 </div>
 </section>
 <section id="periodic-orbit">
-<h2>Periodic-Orbit<a class="headerlink" href="#periodic-orbit" title="Link to this heading">#</a></h2>
+<h2>Periodic-orbit<a class="headerlink" href="#periodic-orbit" title="Link to this heading">#</a></h2>
 <p>A periodic-orbit linear system is an <span class="math notranslate nohighlight">\(h\)</span>-periodic linear system
 in which there exists matrices  <span class="math notranslate nohighlight">\((M_x, M_w, M_z)\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}M_x^h &amp;= M_x, \qquad \ M_w^h = M_w,  \qquad M_z^h = M_z, \\
  \mat{c|c}{\Acl_k &amp; \Bcl_k \hl \Ccl_k &amp; \Dcl_k }  &amp;= \mat{c c}{M_x &amp; 0 \\ 0 &amp; M_y}^{-k} \mat{c|c}{\Acl_{0} &amp; \Bcl_{0} \hl \Ccl_{0} &amp; \Dcl_{0} } \mat{c c}{M_x &amp; 0 \\ 0 &amp; M_u}^k, &amp; &amp; \qquad \forall k \in \N.\end{split}\]</div>
-<p>Cyclic Coordinate-Descent algorithms are instances of periodic-orbit algorithms satisfying this simplified structure.</p>
-<p>The <span style="color:#5D93BF">opt</span>-syn implementation of periodic-orbit systems is simplified. The matrix <span class="math notranslate nohighlight">\(M \in \R^{c \times c}\)</span> must satisfy <span class="math notranslate nohighlight">\(M = M^\top, M^h = M\)</span>, where <span class="math notranslate nohighlight">\(c\)</span> is the coordinate dimension of the Kronecker Structure. All other matrices follow from <span class="math notranslate nohighlight">\(M\)</span> by Kronecker structure (e.g. <span class="math notranslate nohighlight">\(M_x = I_{n_x/c} \otimes M\)</span>).</p>
+<p>Cyclic coordinate-descent algorithms are instances of periodic-orbit algorithms satisfying this simplified structure.</p>
+<p>The <span style="color:#5D93BF">opt</span>-syn implementation of periodic-orbit systems is simplified. The matrix <span class="math notranslate nohighlight">\(M \in \R^{c \times c}\)</span> must satisfy <span class="math notranslate nohighlight">\(M = M^\top, M^h = M\)</span>, where <span class="math notranslate nohighlight">\(c\)</span> is the coordinate dimension of the Kronecker structure. All other matrices follow from <span class="math notranslate nohighlight">\(M\)</span> by Kronecker structure (e.g. <span class="math notranslate nohighlight">\(M_x = I_{n_x/c} \otimes M\)</span>).</p>
 <p>Systems with periodic-orbit  networks and controllers can be specified using the command</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys_orbit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system_periodic_orbit</span><span class="p">(</span><span class="n">Operator_Class</span><span class="p">,</span><span class="w"> </span><span class="n">Network</span><span class="p">,</span><span class="w"> </span><span class="n">Controller</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sys_orbit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_system_periodic_orbit</span><span class="p">(</span><span class="n">operator_class</span><span class="p">,</span><span class="w"> </span><span class="n">network</span><span class="p">,</span><span class="w"> </span><span class="n">controller</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Periodic-orbit systems can be enumerated into periodic systems,  and can then be lifted into LTI systems:</p>
@@ -552,7 +552,7 @@ in which there exists matrices  <span class="math notranslate nohighlight">\((M_
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Time-Varying Optimal Solutions</p>
+        <p class="prev-next-title">Time-varying optimal solutions</p>
       </div>
     </a>
     <a class="right-next"
@@ -583,7 +583,7 @@ in which there exists matrices  <span class="math notranslate nohighlight">\((M_
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic">Periodic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-orbit">Periodic-Orbit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#periodic-orbit">Periodic-orbit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#switched">Switched</a></li>
 </ul>
   </nav></div>

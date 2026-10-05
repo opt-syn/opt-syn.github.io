@@ -202,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../how_it_works/index_how_it_works.html">How it works</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index_usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="system/index_system.html">Build the system</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="system/bind.html">Repeated Operator Evaluations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="system/tracking.html">Time-Varying Optimal Solutions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="system/dynamics.html">Time-Varying Dynamical Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/bind.html">Repeated operator evaluations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/tracking.html">Time-varying optimal solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system/dynamics.html">Time-varying dynamical systems</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation.html">Simulate</a></li>
@@ -458,7 +458,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-of-information-structures">Control of information structures</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-synthesis-programs">Simplified Synthesis programs</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-synthesis-programs">Simplified synthesis programs</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elimination">Matrix elimination</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-order-control">Reduced-order control</a></li>
 </ul>
@@ -480,7 +480,7 @@
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">config</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_config</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>Configuration options include numerical tolerances and  recovery prereferences. These are detailed in the  <a class="reference internal" href="../../documentation/doc_config.html"><span class="doc">Configuration Documentation</span></a>.</p>
+<p>Configuration options include numerical tolerances and  recovery preferences. These are detailed in the  <a class="reference internal" href="../../documentation/doc_config.html"><span class="doc">Configuration documentation</span></a>.</p>
 <section id="restricting-information-structures">
 <h2>Restricting  information structures<a class="headerlink" href="#restricting-information-structures" title="Link to this heading">#</a></h2>
 <p>The primary user-facing configuration option in algorithm synthesis is the specification of the sparsity pattern of the controller matrix <span class="math notranslate nohighlight">\(D_K\)</span>.</p>
@@ -527,7 +527,7 @@
 </table>
 </div>
 <p>The sequential schemes each have a <span class="math notranslate nohighlight">\(\bullet\)</span> in the lower-left position: <span class="math notranslate nohighlight">\(w^2\)</span> is computed based on information from <span class="math notranslate nohighlight">\(w^1\)</span>. Parallel schemes can evaluate <span class="math notranslate nohighlight">\(w^1\)</span> and <span class="math notranslate nohighlight">\(w^2\)</span> separately.</p>
-<p>In Analysis, the information structure can be verified by inspection. Synthesis may be constrained to return algorithms with a desired information structure.</p>
+<p>In analysis, the information structure can be verified by inspection. Synthesis may be constrained to return algorithms with a desired information structure.</p>
 </section>
 <section id="control-of-information-structures">
 <h3>Control of information structures<a class="headerlink" href="#control-of-information-structures" title="Link to this heading">#</a></h3>
@@ -559,26 +559,26 @@
 </section>
 </section>
 <section id="simplified-synthesis-programs">
-<h2>Simplified Synthesis programs<a class="headerlink" href="#simplified-synthesis-programs" title="Link to this heading">#</a></h2>
+<h2>Simplified synthesis programs<a class="headerlink" href="#simplified-synthesis-programs" title="Link to this heading">#</a></h2>
 <p>Special structures of the IQC synthesis programs allow for simplification of the LMI programs.
 The supported pairs of simplification methods and dynamical system types are</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head stub"></th>
 <th class="head"><p>LTI</p></th>
-<th class="head"><p>Periodic-Orbit</p></th>
+<th class="head"><p>Periodic-orbit</p></th>
 <th class="head"><p>Periodic</p></th>
 <th class="head"><p>Switched</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><th class="stub"><p>Matrix Elimination</p></th>
+<tr class="row-even"><th class="stub"><p>Matrix elimination</p></th>
 <td><p>✔</p></td>
 <td><p>✔</p></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><th class="stub"><p>Reduced-Order</p></th>
+<tr class="row-odd"><th class="stub"><p>Reduced-order</p></th>
 <td><p>✔</p></td>
 <td><p>✔</p></td>
 <td></td>
@@ -675,7 +675,7 @@ The supported pairs of simplification methods and dynamical system types are</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-of-information-structures">Control of information structures</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-synthesis-programs">Simplified Synthesis programs</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-synthesis-programs">Simplified synthesis programs</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-elimination">Matrix elimination</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-order-control">Reduced-order control</a></li>
 </ul>
