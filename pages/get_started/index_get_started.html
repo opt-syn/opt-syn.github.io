@@ -255,7 +255,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../documentation/index_documentation.html">Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/doc_manager.html">Manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/doc_solutions.html">Solution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../documentation/operators/doc_operators.html">Operator Classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../documentation/operators/doc_operators.html">Operator classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/operators/doc_set_valued.html">Set-valued maps</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/operators/doc_sml.html">Subdifferentials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../documentation/operators/doc_quadratic.html">Gradients of quadratics</a></li>
@@ -273,8 +273,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../documentation/system/doc_periodic_orbit.html">Periodic-orbit</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation/doc_iqc.html">Integral Quadratic Constraints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation/doc_specs.html">Performance Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/doc_iqc.html">Integral quadratic constraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/doc_specs.html">Performance specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/doc_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/doc_simulation.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/doc_plotting.html">Plotting</a></li>
@@ -504,7 +504,7 @@
 \[\beta_{k+1} = \text{proj}_{\mathcal{Z}}(\beta_k - \gamma \partial f(\beta_k)).\]</div>
 <p>PGD achieves linear convergence at rate <span class="math notranslate nohighlight">\(\rho \in (0, 1)\)</span> to the optimum <span class="math notranslate nohighlight">\(\beta^*\)</span> if there exists a constant <span class="math notranslate nohighlight">\(C_0 &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\norm{\beta_{k}-\beta^*}_2  \leq  C_0 \rho^{-k} \norm{\beta_0-\beta^*}_2, \ \forall x_0, k, f.\]</div>
+\[\norm{\beta_{k}-\beta^*}_2  \leq  C_0 \rho^{k} \norm{\beta_0-\beta^*}_2, \ \forall \beta_0, k, f.\]</div>
 <p>The minimal worst-case convergence rate for PGD is <span class="math notranslate nohighlight">\(\frac{L-m}{L+m}\)</span> <a class="footnote-reference brackets" href="#footcite-taylor2018exact" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. This rate is achieved with stepsize parameter <span class="math notranslate nohighlight">\(\gamma = \frac{2}{L+m}\)</span>.</p>
 <p>Analysis code to numerically verify this rate for parameters <span class="math notranslate nohighlight">\(m = 1, L = 10\)</span> is</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">%describe the operators </span>
