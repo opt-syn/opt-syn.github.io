@@ -474,7 +474,7 @@
 <h1>Get started<a class="headerlink" href="#get-started" title="Link to this heading">#</a></h1>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p><span style="color:#5D93BF">opt</span>-syn may be downloaded from <a class="reference external" href="https://github.com/Jarmill/opt-syn">github</a>.</p>
+<p><span style="color:#5D93BF">opt</span>-syn may be downloaded from <a class="reference external" href="https://github.com/opt-syn/opt-syn">github</a>.</p>
 <p>It is tested for MATLAB versions  <span class="math notranslate nohighlight">\(\geq\)</span> 2024a.</p>
 </section>
 <section id="workflow">
@@ -484,13 +484,13 @@
 <li><p>Define the class of functions/operators in the optimization/inclusion problem.</p></li>
 <li><p>Specify the algorithm (analysis), or the network interfacing the operators (synthesis)</p></li>
 <li><p>Choose the order of the certification (higher order: better bounds, more expensive)</p></li>
-<li><p>Solve the profiling problem</p></li>
+<li><p>Solve the analysis or synthesis problem</p></li>
 <li><p>Validate the solution, and plot sample trajectories</p></li>
 </ol>
 </section>
 <section id="optimization-example-setup">
 <span id="id1"></span><h2>Optimization example setup<a class="headerlink" href="#optimization-example-setup" title="Link to this heading">#</a></h2>
-<p>A constrained optimization problem minimizing a function <span class="math notranslate nohighlight">\(f\)</span> subject to a <span class="math notranslate nohighlight">\(L_1\)</span> norm constraint is</p>
+<p>A constrained optimization problem minimizing a function <span class="math notranslate nohighlight">\(f\)</span> subject to an <span class="math notranslate nohighlight">\(L_1\)</span> norm constraint is</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \beta^* \in \text{argmin}_{\norm{\beta}_1 \leq 100} f(\beta).

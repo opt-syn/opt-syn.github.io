@@ -492,7 +492,7 @@
 <p>Many common optimization algorithms can be expressed as the interconnection of operators and linear systems <a class="footnote-reference brackets" href="#footcite-wang2011control" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. As an example, the gradient descent/forward-step method with stepsize <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
- \mat{c}{x_{k+1} \hl z_k} &amp;= \mat{c|c}{I &amp; -\gamma \lambda I \hl I &amp; 0 }   \mat{c}{x_{k} \hl w_k}, &amp; \mat{c}{w_k} \in  \mat{c}{F_1(z_k)},
+ \mat{c}{x_{k+1} \hl z_k} &amp;= \mat{c|c}{I &amp; -\gamma  I \hl I &amp; 0 }   \mat{c}{x_{k} \hl w_k}, &amp; \mat{c}{w_k} \in  \mat{c}{F_1(z_k)},
 \end{align*}\]</div>
 <p>and the   Douglas-Rachford algorithm <a class="footnote-reference brackets" href="#footcite-douglas1956numerical" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>   with parameters <span class="math notranslate nohighlight">\(\gamma, \lambda \geq 0\)</span> may be represented by</p>
 <div class="math notranslate nohighlight">
@@ -552,14 +552,14 @@
 </section>
 <section id="implications">
 <h3>Implications<a class="headerlink" href="#implications" title="Link to this heading">#</a></h3>
-<p>The robust stability criterion is an intensive dynamical test, and will be verified using integral quadratic constraints and linear matrix inequality methods <a class="footnote-reference brackets" href="#footcite-megretski2002system" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. In contrast, the  regulator equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> follows if <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span> is detectable.</p>
+<p>The robust stability criterion is an intensive dynamical test, and is verified using integral quadratic constraints and linear matrix inequality methods <a class="footnote-reference brackets" href="#footcite-megretski2002system" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#footcite-stoorvogel2000performance" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>. In contrast, the  regulator equation can be easily checked by solving a linear system of  equations. Uniqueness of the state <span class="math notranslate nohighlight">\(x^*\)</span> follows if <span class="math notranslate nohighlight">\((\Acl, \Ccl)\)</span> is detectable.</p>
 <p>The regulator equation requirement is independent of the specific operators in <span class="math notranslate nohighlight">\(F\)</span>. Robust stability is verified for classes of operators (e.g. <span class="math notranslate nohighlight">\(F_2\)</span> is maximal monotone).</p>
-<p>Fullfillment of the regulator equation and the <span style="color:#5D93BF">opt</span>-syn-verified robust stability condition imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
+<p>Fulfillment of the regulator equation and the <span style="color:#5D93BF">opt</span>-syn-verified robust stability condition imply that the algorithm is a fixed-point encoding <a class="footnote-reference brackets" href="#footcite-ryu2020uniqueness" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>: every fixed point of the algorithm is a fixed point of the inclusion problem.</p>
 </section>
 </section>
 <section id="networked-setting">
 <h2>Networked setting<a class="headerlink" href="#networked-setting" title="Link to this heading">#</a></h2>
-<p>Synthesis is posed in terms of a network separating the oracle <span class="math notranslate nohighlight">\(F\)</span> to the controller (you). These networks can model time-delays, cross-talk, channel memory, and other phenomena. The default case of no network dynamics (direct connection to the oracle <span class="math notranslate nohighlight">\(F\)</span>) is</p>
+<p>Synthesis is posed in terms of a network separating the oracle <span class="math notranslate nohighlight">\(F\)</span> from  the controller (you). These networks can model time-delays, cross-talk, channel memory, and other phenomena. The default case of no network dynamics (direct connection to the oracle <span class="math notranslate nohighlight">\(F\)</span>) is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mat{c}{
         z_k \\ y_k
@@ -591,7 +591,7 @@ Synthesis may also involve selecting a solution <span class="math notranslate no
 </section>
 <section id="extensions">
 <h2>Extensions<a class="headerlink" href="#extensions" title="Link to this heading">#</a></h2>
-<p>The overview is limited to static optimization problems with time-independent memory/stepsize rules. The <a class="reference internal" href="../usage/problem_formulation/index_problem_formulation.html"><span class="doc">Problem formulation</span></a> section in <a class="reference internal" href="../usage/index_usage.html"><span class="doc">Usage</span></a> documents generalizations to this base construction, including</p>
+<p>The overview is limited to static optimization problems with time-independent memory/stepsize rules. The <a class="reference internal" href="../usage/problem_formulation/index_problem_formulation.html"><span class="doc">Problem setup</span></a> section in <a class="reference internal" href="../usage/index_usage.html"><span class="doc">Usage</span></a> documents generalizations to this base construction, including</p>
 <ul class="simple">
 <li><p>Performance criteria</p></li>
 <li><p>Time-varying optimization problems</p></li>
