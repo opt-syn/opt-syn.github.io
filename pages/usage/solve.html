@@ -483,8 +483,8 @@
 <p>Three solution modes are available:</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="#single-solution"><span class="xref myst">Single solution</span></a></p></li>
-<li><p><a class="reference internal" href="#bisection"><span class="xref myst">Bisection</span></a></p></li>
-<li><p><a class="reference internal" href="#alternation"><span class="xref myst">Alternation</span></a></p></li>
+<li><p><a class="reference internal" href="#id3"><span class="xref myst">Bisection</span></a></p></li>
+<li><p><a class="reference internal" href="#id4"><span class="xref myst">Alternation</span></a></p></li>
 </ol>
 <section id="single-solution">
 <span id="id1"></span><h2>Single solution<a class="headerlink" href="#single-solution" title="Link to this heading">#</a></h2>
@@ -524,7 +524,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Analysis is performed with respect to a common certificate among all performance specifications in <code class="docutils literal notranslate"><span class="pre">specs</span></code> <a class="footnote-reference brackets" href="#footcite-scherer1997multiobjective" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Requiring this common certificate may yield conservatism as compared to doing analysis separately for each specification in <code class="docutils literal notranslate"><span class="pre">specs</span></code>.</p>
-<p>The common certificate is required if <a class="reference internal" href="#alternation"><span class="xref myst">alternation</span></a> between analysis and synthesis is performed.</p>
+<p>The common certificate is required if <a class="reference internal" href="#id4"><span class="xref myst">alternation</span></a> between analysis and synthesis is performed.</p>
 </div>
 <p>Synthesis is invoked by</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sol_syn_single</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">man_syn</span><span class="p">.</span><span class="n">solve_single</span><span class="p">(</span><span class="n">iqc_init</span><span class="p">,</span><span class="w"> </span><span class="n">specs</span><span class="p">);</span>
