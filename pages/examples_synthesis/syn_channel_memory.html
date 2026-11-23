@@ -520,10 +520,10 @@ z^2_k &amp;= u_k^2, &amp; y_k^2 &amp;= w_k^2, &amp; &amp; \forall k \in \N.
 
 <span class="c">%% solve the problem</span>
 <span class="n">config</span><span class="w"> </span><span class="p">=</span><span class="n">opt_config</span><span class="p">();</span>
-<span class="n">config</span><span class="p">.</span><span class="n">syn</span><span class="p">.</span><span class="n">elimination</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="n">config</span><span class="p">.</span><span class="n">syn</span><span class="p">.</span><span class="n">elimination_type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="n">config</span><span class="p">.</span><span class="n">syn</span><span class="p">.</span><span class="n">reduced_order</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">config</span><span class="p">.</span><span class="n">gen</span><span class="p">.</span><span class="n">same_rho</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="c">% config.syn.elimination = true;</span>
+<span class="c">% config.syn.elimination_type = 0;</span>
+<span class="c">% config.syn.reduced_order = 1;</span>
+<span class="c">% config.gen.same_rho = true;</span>
 <span class="n">man</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">opt_synthesis</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">);</span>
 <span class="n">order</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
 </pre></div>
